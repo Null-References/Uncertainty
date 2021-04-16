@@ -63075,7 +63075,7 @@ MonoBehaviour:
   health: 10
   moveSpeed: -1200
   mouseSensivity: -10
-  rotSpeedVector: {x: 80, y: -80, z: -80}
+  rotSpeedVector: {x: 50, y: -50, z: -50}
   jump_Start: 0
 --- !u!114 &6978776649794093686
 MonoBehaviour:
