@@ -1,21 +1,21 @@
  ### Uncertainty Scenario
 
-  ### Goal :
-  - Goal is to make an action-adventure space shooter game with main focus on boss fight mechanics
+  ### Goals :
+  - In this project, we aim to develop a space shooter action-adventure game based on boss fight mechanics.
 
-  #### Demo :
-  - for demo main focus is to make one level with basic enemies and a boss fight
+ #### Demo :
+  - The main objective for demo is to make one level with a boss fight and basic enemies.
   
-#### Targeted Platforms :
+####  Targeted Platforms :
  - Windows
  - Mac
 #### Game Features :
-- ride spaceship
-- shooting
-- using abilities
-- buying modules for ship
-- enemy AI
-- boss fight AI
-- sci-fi futuristic location
-- boss fights for each level
+- Ride a spaceship
+- Shooting
+- Using abilities
+- Purchasing modules for the ship
+- The enemy AI
+- AI for boss fights
+- Futuristic sci-fi locations
+- For each level, there is a boss fight
 #### Game Scenario :
