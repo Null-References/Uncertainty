@@ -19,3 +19,8 @@
 - Futuristic sci-fi locations
 - For each level, there is a boss fight
 #### Game Scenario :
+1. Upon opening the game, the main menu will be displayed.
+2. There are multiple options available to players: changing settings, starting the game, continuing saved game, and exiting.
+3. Within the settings menu, players can alter graphic, audio, and control settings.
+4. The Spaceship will spawn in a spot called the home base when the player clicks start the game.
+5. 
