@@ -9,32 +9,6 @@
 [![MIT License][license-shield]][license-url]
 
 
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  
-  <h3 align="center">Uncertainty</h3>
-
-  <p align="center">
-    Uncertainty is an action-adventure space-shooter game.
-    <br />
-    We are using this project as our "Software Engineering Lab" course project.
-    <br />
-    (Spring 2021)
-
- 
-
-### Game Scenario:
-[Read more about it in here](https://github.com/Null-References/Uncertainty/blob/main/Docs/SCENARIO.md)
-
-
-
-### Team Members:
-
-First Name | Last Name | Student Number
---- | --- | ---
-[Parsa](https://github.com/benymaxparsa) | [KamaliPour](https://github.com/benymaxparsa) | `97149081`
-[Mohammad Mahdi](https://github.com/mohmehdi) | [Afkhami](https://github.com/mohmehdi) | `97149008`
 
 
 
