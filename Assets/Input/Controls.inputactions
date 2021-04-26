@@ -1,0 +1,157 @@
+{
+    "name": "Controls",
+    "maps": [
+        {
+            "name": "SpaceShip",
+            "id": "abaa505f-76cd-4a34-a955-f1f5104b4971",
+            "actions": [
+                {
+                    "name": "Steering_keyboard",
+                    "type": "Value",
+                    "id": "9b778250-5616-46d7-a87c-10921c128287",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Steering_mouse",
+                    "type": "Value",
+                    "id": "5ac58c89-e668-48f7-9a08-4554be5d4ea8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "keyboard",
+                    "id": "6438757c-fe19-471a-9dfc-bdf701b84f16",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Steering_keyboard",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "f04cc383-ba15-4640-82c3-ffad093dbd86",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6bc31d73-dd82-4533-98b0-5a6f852e1f1e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "13fd9086-479e-4b69-a3cb-fbb5f721ca2f",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "e40ad212-f8ec-4cad-b329-7d9ed6638be9",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "mosue",
+                    "id": "cbeeb806-70a7-4baf-8dc1-fe299b63d921",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Steering_mouse",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "27b56c72-7d51-44f6-bd15-953f53541fdc",
+                    "path": "<Mouse>/position/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "d86b6eb9-0bd4-45ab-b3e4-5780d0c25dcd",
+                    "path": "<Mouse>/position/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "e577fcc6-7ee8-48e1-ba8d-da92366d8bbd",
+                    "path": "<Mouse>/position/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "1c1d771d-3810-456f-8468-7be16c420173",
+                    "path": "<Mouse>/radius/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyBoard",
+                    "action": "Steering_mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "MouseKeyBoard",
+            "bindingGroup": "MouseKeyBoard",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
