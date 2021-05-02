@@ -24,8 +24,8 @@
             ],
             "bindings": [
                 {
-                    "name": "keyboard",
-                    "id": "6438757c-fe19-471a-9dfc-bdf701b84f16",
+                    "name": "WASD",
+                    "id": "a23f3d89-f2a3-49bd-9c19-08addcecadcc",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -36,119 +36,92 @@
                 },
                 {
                     "name": "up",
-                    "id": "f04cc383-ba15-4640-82c3-ffad093dbd86",
+                    "id": "c871cc39-c337-4cb5-8cdf-0c5bb7ec98c0",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "MouseKeyBoard",
+                    "groups": "Keyboard",
                     "action": "Steering_keyboard",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "6bc31d73-dd82-4533-98b0-5a6f852e1f1e",
+                    "id": "62bbcfe4-b2d5-4e80-8ea2-277dbd8e4645",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "MouseKeyBoard",
+                    "groups": "Keyboard",
                     "action": "Steering_keyboard",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "13fd9086-479e-4b69-a3cb-fbb5f721ca2f",
+                    "id": "8b07334c-107c-40ab-b91b-b6d8ecaa7ee5",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "MouseKeyBoard",
+                    "groups": "Keyboard",
                     "action": "Steering_keyboard",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "e40ad212-f8ec-4cad-b329-7d9ed6638be9",
+                    "id": "4053081d-ddcf-4374-ba97-48e2304c9332",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "MouseKeyBoard",
+                    "groups": "Keyboard",
                     "action": "Steering_keyboard",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "mosue",
-                    "id": "cbeeb806-70a7-4baf-8dc1-fe299b63d921",
-                    "path": "2DVector",
+                    "name": "",
+                    "id": "0c540d58-ae8c-4873-8a6b-1980354c1027",
+                    "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Mouse",
                     "action": "Steering_mouse",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "27b56c72-7d51-44f6-bd15-953f53541fdc",
-                    "path": "<Mouse>/position/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseKeyBoard",
-                    "action": "Steering_mouse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "d86b6eb9-0bd4-45ab-b3e4-5780d0c25dcd",
-                    "path": "<Mouse>/position/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseKeyBoard",
-                    "action": "Steering_mouse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "e577fcc6-7ee8-48e1-ba8d-da92366d8bbd",
-                    "path": "<Mouse>/position/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseKeyBoard",
-                    "action": "Steering_mouse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "1c1d771d-3810-456f-8468-7be16c420173",
-                    "path": "<Mouse>/radius/x",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "MouseKeyBoard",
-                    "action": "Steering_mouse",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }
     ],
     "controlSchemes": [
         {
-            "name": "MouseKeyBoard",
-            "bindingGroup": "MouseKeyBoard",
+            "name": "Keyboard",
+            "bindingGroup": "Keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
             "devices": [
                 {
                     "devicePath": "<Mouse>",
                     "isOptional": false,
                     "isOR": false
-                },
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
                 {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": false,
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
                     "isOR": false
                 }
             ]
