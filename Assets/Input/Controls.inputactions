@@ -6,7 +6,7 @@
             "id": "abaa505f-76cd-4a34-a955-f1f5104b4971",
             "actions": [
                 {
-                    "name": "Steering_keyboard",
+                    "name": "Rotation",
                     "type": "Value",
                     "id": "9b778250-5616-46d7-a87c-10921c128287",
                     "expectedControlType": "Vector2",
@@ -30,7 +30,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Steering_keyboard",
+                    "action": "Rotation",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -41,7 +41,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Steering_keyboard",
+                    "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -52,7 +52,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Steering_keyboard",
+                    "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -63,7 +63,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Steering_keyboard",
+                    "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -74,7 +74,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Steering_keyboard",
+                    "action": "Rotation",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },

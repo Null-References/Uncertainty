@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-public class ShipControlerManager : MonoBehaviour
+/*public class ShipControlerManager : MonoBehaviour
 {
 
     public RectTransform mousePos;
@@ -72,4 +72,4 @@ public class ShipControlerManager : MonoBehaviour
     //        }
     //    }
     //}
-}
+}*/

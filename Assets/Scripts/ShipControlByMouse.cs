@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
-public class ShipControlByMouse : Controler
+/*public class ShipControlByMouse : Controler
 {
+  
     private KeyMap keys;
     private Transform shipBody;
 
@@ -66,4 +67,4 @@ public class ShipControlByMouse : Controler
         //add force to move ship
         ship_rb.AddForce(shipTransform.forward * moveForward, ForceMode.Force);
     }
-}
+}*/

@@ -19,7 +19,7 @@ public class @Controls : IInputActionCollection, IDisposable
             ""id"": ""abaa505f-76cd-4a34-a955-f1f5104b4971"",
             ""actions"": [
                 {
-                    ""name"": ""Steering_keyboard"",
+                    ""name"": ""Rotation"",
                     ""type"": ""Value"",
                     ""id"": ""9b778250-5616-46d7-a87c-10921c128287"",
                     ""expectedControlType"": ""Vector2"",
@@ -43,7 +43,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Steering_keyboard"",
+                    ""action"": ""Rotation"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -54,7 +54,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Steering_keyboard"",
+                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -65,7 +65,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Steering_keyboard"",
+                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -76,7 +76,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Steering_keyboard"",
+                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -87,7 +87,7 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Steering_keyboard"",
+                    ""action"": ""Rotation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -143,7 +143,7 @@ public class @Controls : IInputActionCollection, IDisposable
 }");
         // SpaceShip
         m_SpaceShip = asset.FindActionMap("SpaceShip", throwIfNotFound: true);
-        m_SpaceShip_Steering_keyboard = m_SpaceShip.FindAction("Steering_keyboard", throwIfNotFound: true);
+        m_SpaceShip_Rotation = m_SpaceShip.FindAction("Rotation", throwIfNotFound: true);
         m_SpaceShip_Steering_mouse = m_SpaceShip.FindAction("Steering_mouse", throwIfNotFound: true);
     }
 
@@ -194,13 +194,13 @@ public class @Controls : IInputActionCollection, IDisposable
     // SpaceShip
     private readonly InputActionMap m_SpaceShip;
     private ISpaceShipActions m_SpaceShipActionsCallbackInterface;
-    private readonly InputAction m_SpaceShip_Steering_keyboard;
+    private readonly InputAction m_SpaceShip_Rotation;
     private readonly InputAction m_SpaceShip_Steering_mouse;
     public struct SpaceShipActions
     {
         private @Controls m_Wrapper;
         public SpaceShipActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Steering_keyboard => m_Wrapper.m_SpaceShip_Steering_keyboard;
+        public InputAction @Rotation => m_Wrapper.m_SpaceShip_Rotation;
         public InputAction @Steering_mouse => m_Wrapper.m_SpaceShip_Steering_mouse;
         public InputActionMap Get() { return m_Wrapper.m_SpaceShip; }
         public void Enable() { Get().Enable(); }
@@ -211,9 +211,9 @@ public class @Controls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_SpaceShipActionsCallbackInterface != null)
             {
-                @Steering_keyboard.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_keyboard;
-                @Steering_keyboard.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_keyboard;
-                @Steering_keyboard.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_keyboard;
+                @Rotation.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRotation;
+                @Rotation.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRotation;
+                @Rotation.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRotation;
                 @Steering_mouse.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Steering_mouse.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Steering_mouse.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
@@ -221,9 +221,9 @@ public class @Controls : IInputActionCollection, IDisposable
             m_Wrapper.m_SpaceShipActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Steering_keyboard.started += instance.OnSteering_keyboard;
-                @Steering_keyboard.performed += instance.OnSteering_keyboard;
-                @Steering_keyboard.canceled += instance.OnSteering_keyboard;
+                @Rotation.started += instance.OnRotation;
+                @Rotation.performed += instance.OnRotation;
+                @Rotation.canceled += instance.OnRotation;
                 @Steering_mouse.started += instance.OnSteering_mouse;
                 @Steering_mouse.performed += instance.OnSteering_mouse;
                 @Steering_mouse.canceled += instance.OnSteering_mouse;
@@ -260,7 +260,7 @@ public class @Controls : IInputActionCollection, IDisposable
     }
     public interface ISpaceShipActions
     {
-        void OnSteering_keyboard(InputAction.CallbackContext context);
+        void OnRotation(InputAction.CallbackContext context);
         void OnSteering_mouse(InputAction.CallbackContext context);
     }
 }
