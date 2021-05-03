@@ -33,8 +33,8 @@
 
 First Name | Last Name | Student Number
 --- | --- | ---
-[Parsa](https://github.com/benymaxparsa) | [KamaliPour](https://github.com/benymaxparsa) | `97149081`
-[Mohammad Mahdi](https://github.com/mohmehdi) | [Afkhami](https://github.com/mohmehdi) | `97149008`
+Parsa | KamaliPour | `97149081`
+Mohammad Mahdi | Afkhami | `97149008`
 
 
 
