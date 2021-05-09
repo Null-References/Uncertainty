@@ -22,19 +22,54 @@
     <br />
     (Spring 2021)
 
- 
 
-### Game Scenario:
-[Read more about it in here](https://github.com/Null-References/Uncertainty/blob/main/Docs/SCENARIO.md)
+## Introduction:  
+Uncertainty is a 3D game developed in Unity 2019.4.16f1,  
+we plan to develop a space shooter action-packed adventure game based on boss fight mechanics.  
 
 
+## Technical Specifications:  
+- Platform: Windows, Mac OS  
+- Programming Languages: C#
+- Database: Data are handled in Unity
 
-### Team Members:
 
-First Name | Last Name | Student Number
---- | --- | ---
-[Parsa](https://github.com/benymaxparsa) | KamaliPour | `97149081`
-[Mohammad Mahdi](https://github.com/mohmehdi) | Afkhami | `97149008`
+## Project Requirements:  
+#### Functional Requirements:  
+- TBD
+- TBD
+- TBD
+
+#### Non-Functional Requirements:  
+- TBD
+- TBD
+- TBD
+
+
+## Project Documentation:  
+
+#### Needs assessment and project scenario:  
+- Project Scenario: [Link](https://github.com/Null-References/Uncertainty/blob/main/Documentation/SCENARIO.md)
+- Project Needs assessment: [Link (ToDo)]()  
+
+#### Project Analysis and Design:
+- Usecase Diagram: [Link (ToDo)]()
+- Activity Diagram: [Link (ToDo)]()
+- Class Diagram: [Link (ToDo)]()
+- Sequence Diagram: [Link (ToDo)]()  
+
+#### Project Management:  
+- Project Phasing documentation: [Link (ToDo)]() 
+- Project Scheduling documentation: [Link (ToDo)]() 
+
+
+### Project Members:  
+#### Project Code: G14
+
+First and Last Name | Student Number | Responsibility | Username
+--- | --- | --- | ---
+Parsa KamaliPour | `97149081` | TBD | [Link](https://github.com/benymaxparsa)
+Mohammad Mahdi Afkhami | `97149008` | TBD | [Link](https://github.com/mohmehdi)
 
 
 
