@@ -63,7 +63,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Project Scheduling documentation: [Link (ToDo)]() 
 
 
-### Project Members:  
+## Project Members:  
 #### Project Code: G14
 
 First and Last Name | Student Number | Responsibility | Username
