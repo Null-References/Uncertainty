@@ -7,13 +7,11 @@ public class ShipControl : MonoBehaviour
 { 
     
     [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private float mouseSensivity = 1f;
     [Range(0,1)]
     [SerializeField] private float mouseDeadZone = 0.6f;
     [SerializeField] private float deadZoneCoef = 5;
 
-    private Vector2 testVector;
-    private Vector3 controlMousePos;
-    private Vector3 controlMousePosAfter;
 
     private Rigidbody rb = null;
     private Controls controls;
@@ -41,38 +39,31 @@ public class ShipControl : MonoBehaviour
         controls.Disable();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        Move(Vector2.zero);
+        var torque = GetMouseValue() * mouseSensivity * Time.fixedDeltaTime;
+        rb.AddRelativeTorque(torque.y, torque.x, 0);
     }
 
-    private void Move(Vector2 dir)
+    private Vector2 GetMouseValue()
     {
-
+        //TODO:stop rotating around with a button or delta value
+        
         Vector2 mouseVec = controls.SpaceShip.Steering_mouse.ReadValue<Vector2>();
+        
+        //set mouse values to be between -1 , 1
         mouseVec = new Vector2(mouseVec.x- (Screen.width/2), mouseVec.y- (Screen.height/2)) /(Screen.width / 2);
-
-       
+        
+        //clamp mouse vector lenght to certain value 
         if (mouseVec.magnitude > mouseDeadZone)
         {
             mouseVec = mouseVec.normalized * mouseDeadZone;
         }
+        //enlarge the zone circle
+        mouseVec *= deadZoneCoef;
 
-        testVector = new Vector3(mouseVec.x, mouseVec.y, 0)- transform.position;;
-        Debug.Log(mouseVec * deadZoneCoef );
-        // rb.AddForce(new Vector3(pos.x, 0, pos.y) * moveSpeed);
-        //Debug.Log(1/Mathf.Pow(pos,2));
+        return mouseVec;
     }
 
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawRay(transform.position ,new Vector3( -testVector.x ,testVector.y,0)*deadZoneCoef);
-        
-    //    Gizmos.color = Color.yellow;
-    //    Gizmos.DrawSphere(transform.position + controlMousePos, 0.1f);
-
-    //    Gizmos.color = Color.green;
-    //    Gizmos.DrawWireSphere(transform.position + controlMousePosAfter, 0.1f);
-    //}
+   
 }

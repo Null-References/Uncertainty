@@ -33,6 +33,14 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Free_Look"",
+                    ""type"": ""Button"",
+                    ""id"": ""46e05938-b8c1-48fe-9e48-d11c0512c316"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -101,6 +109,17 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Steering_mouse"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""74ab0324-efe4-40df-b958-fe5c56c315bc"",
+                    ""path"": ""<Keyboard>/alt"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Free_Look"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -145,6 +164,7 @@ public class @Controls : IInputActionCollection, IDisposable
         m_SpaceShip = asset.FindActionMap("SpaceShip", throwIfNotFound: true);
         m_SpaceShip_Rotation = m_SpaceShip.FindAction("Rotation", throwIfNotFound: true);
         m_SpaceShip_Steering_mouse = m_SpaceShip.FindAction("Steering_mouse", throwIfNotFound: true);
+        m_SpaceShip_Free_Look = m_SpaceShip.FindAction("Free_Look", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -196,12 +216,14 @@ public class @Controls : IInputActionCollection, IDisposable
     private ISpaceShipActions m_SpaceShipActionsCallbackInterface;
     private readonly InputAction m_SpaceShip_Rotation;
     private readonly InputAction m_SpaceShip_Steering_mouse;
+    private readonly InputAction m_SpaceShip_Free_Look;
     public struct SpaceShipActions
     {
         private @Controls m_Wrapper;
         public SpaceShipActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Rotation => m_Wrapper.m_SpaceShip_Rotation;
         public InputAction @Steering_mouse => m_Wrapper.m_SpaceShip_Steering_mouse;
+        public InputAction @Free_Look => m_Wrapper.m_SpaceShip_Free_Look;
         public InputActionMap Get() { return m_Wrapper.m_SpaceShip; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -217,6 +239,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Steering_mouse.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Steering_mouse.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Steering_mouse.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
+                @Free_Look.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnFree_Look;
+                @Free_Look.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnFree_Look;
+                @Free_Look.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnFree_Look;
             }
             m_Wrapper.m_SpaceShipActionsCallbackInterface = instance;
             if (instance != null)
@@ -227,6 +252,9 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Steering_mouse.started += instance.OnSteering_mouse;
                 @Steering_mouse.performed += instance.OnSteering_mouse;
                 @Steering_mouse.canceled += instance.OnSteering_mouse;
+                @Free_Look.started += instance.OnFree_Look;
+                @Free_Look.performed += instance.OnFree_Look;
+                @Free_Look.canceled += instance.OnFree_Look;
             }
         }
     }
@@ -262,5 +290,6 @@ public class @Controls : IInputActionCollection, IDisposable
     {
         void OnRotation(InputAction.CallbackContext context);
         void OnSteering_mouse(InputAction.CallbackContext context);
+        void OnFree_Look(InputAction.CallbackContext context);
     }
 }
