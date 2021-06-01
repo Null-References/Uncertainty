@@ -34,6 +34,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Database: Data are handled in Unity
 
 
+
 ## Project Requirements:  
 #### Functional Requirements:  
 - The player can move the spaceship
@@ -70,7 +71,6 @@ First and Last Name | Student Number | Responsibility | Username
 --- | --- | --- | ---
 Parsa KamaliPour | `97149081` | Project Manager , Programmer | [Link](https://github.com/benymaxparsa)
 Mohammad Mahdi Afkhami | `97149008` | Programmer , Art Designer | [Link](https://github.com/mohmehdi)
-
 
 
 
