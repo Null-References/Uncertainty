@@ -19,14 +19,6 @@ public class @Controls : IInputActionCollection, IDisposable
             ""id"": ""abaa505f-76cd-4a34-a955-f1f5104b4971"",
             ""actions"": [
                 {
-                    ""name"": ""Rotation"",
-                    ""type"": ""Value"",
-                    ""id"": ""9b778250-5616-46d7-a87c-10921c128287"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Steering_mouse"",
                     ""type"": ""Value"",
                     ""id"": ""5ac58c89-e668-48f7-9a08-4554be5d4ea8"",
@@ -41,64 +33,25 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Move_Forward_Backward"",
+                    ""type"": ""Button"",
+                    ""id"": ""42599a94-9e0f-4379-8866-92d487f10cd9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Roll"",
+                    ""type"": ""Button"",
+                    ""id"": ""e93cb68a-16b7-4b9a-a3b2-a3aa18d54dc1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": ""WASD"",
-                    ""id"": ""a23f3d89-f2a3-49bd-9c19-08addcecadcc"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Rotation"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""c871cc39-c337-4cb5-8cdf-0c5bb7ec98c0"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Rotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""62bbcfe4-b2d5-4e80-8ea2-277dbd8e4645"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Rotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""8b07334c-107c-40ab-b91b-b6d8ecaa7ee5"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Rotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""4053081d-ddcf-4374-ba97-48e2304c9332"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Rotation"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": """",
                     ""id"": ""0c540d58-ae8c-4873-8a6b-1980354c1027"",
@@ -113,13 +66,79 @@ public class @Controls : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""74ab0324-efe4-40df-b958-fe5c56c315bc"",
-                    ""path"": ""<Keyboard>/alt"",
+                    ""path"": ""<Keyboard>/rightAlt"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Free_Look"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Longitudinal"",
+                    ""id"": ""cc768e96-56c5-477b-b8c0-e2c563f0d834"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move_Forward_Backward"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c7529756-3c93-4530-a248-2954360383a6"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Move_Forward_Backward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""17d8945f-2383-4ac2-9a5a-f6a3c2fe863d"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Move_Forward_Backward"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""roll"",
+                    ""id"": ""f141433e-cb35-4250-9a13-2b7250c03c9d"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Roll"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""f6793560-3e0e-49ba-8ecd-fa56b4b31078"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Roll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""f1aabd50-473e-434a-8594-a816bcad1a24"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Roll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -162,9 +181,10 @@ public class @Controls : IInputActionCollection, IDisposable
 }");
         // SpaceShip
         m_SpaceShip = asset.FindActionMap("SpaceShip", throwIfNotFound: true);
-        m_SpaceShip_Rotation = m_SpaceShip.FindAction("Rotation", throwIfNotFound: true);
         m_SpaceShip_Steering_mouse = m_SpaceShip.FindAction("Steering_mouse", throwIfNotFound: true);
         m_SpaceShip_Free_Look = m_SpaceShip.FindAction("Free_Look", throwIfNotFound: true);
+        m_SpaceShip_Move_Forward_Backward = m_SpaceShip.FindAction("Move_Forward_Backward", throwIfNotFound: true);
+        m_SpaceShip_Roll = m_SpaceShip.FindAction("Roll", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -214,16 +234,18 @@ public class @Controls : IInputActionCollection, IDisposable
     // SpaceShip
     private readonly InputActionMap m_SpaceShip;
     private ISpaceShipActions m_SpaceShipActionsCallbackInterface;
-    private readonly InputAction m_SpaceShip_Rotation;
     private readonly InputAction m_SpaceShip_Steering_mouse;
     private readonly InputAction m_SpaceShip_Free_Look;
+    private readonly InputAction m_SpaceShip_Move_Forward_Backward;
+    private readonly InputAction m_SpaceShip_Roll;
     public struct SpaceShipActions
     {
         private @Controls m_Wrapper;
         public SpaceShipActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Rotation => m_Wrapper.m_SpaceShip_Rotation;
         public InputAction @Steering_mouse => m_Wrapper.m_SpaceShip_Steering_mouse;
         public InputAction @Free_Look => m_Wrapper.m_SpaceShip_Free_Look;
+        public InputAction @Move_Forward_Backward => m_Wrapper.m_SpaceShip_Move_Forward_Backward;
+        public InputAction @Roll => m_Wrapper.m_SpaceShip_Roll;
         public InputActionMap Get() { return m_Wrapper.m_SpaceShip; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -233,28 +255,34 @@ public class @Controls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_SpaceShipActionsCallbackInterface != null)
             {
-                @Rotation.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRotation;
-                @Rotation.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRotation;
-                @Rotation.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRotation;
                 @Steering_mouse.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Steering_mouse.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Steering_mouse.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnSteering_mouse;
                 @Free_Look.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnFree_Look;
                 @Free_Look.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnFree_Look;
                 @Free_Look.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnFree_Look;
+                @Move_Forward_Backward.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnMove_Forward_Backward;
+                @Move_Forward_Backward.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnMove_Forward_Backward;
+                @Move_Forward_Backward.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnMove_Forward_Backward;
+                @Roll.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRoll;
+                @Roll.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRoll;
+                @Roll.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRoll;
             }
             m_Wrapper.m_SpaceShipActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Rotation.started += instance.OnRotation;
-                @Rotation.performed += instance.OnRotation;
-                @Rotation.canceled += instance.OnRotation;
                 @Steering_mouse.started += instance.OnSteering_mouse;
                 @Steering_mouse.performed += instance.OnSteering_mouse;
                 @Steering_mouse.canceled += instance.OnSteering_mouse;
                 @Free_Look.started += instance.OnFree_Look;
                 @Free_Look.performed += instance.OnFree_Look;
                 @Free_Look.canceled += instance.OnFree_Look;
+                @Move_Forward_Backward.started += instance.OnMove_Forward_Backward;
+                @Move_Forward_Backward.performed += instance.OnMove_Forward_Backward;
+                @Move_Forward_Backward.canceled += instance.OnMove_Forward_Backward;
+                @Roll.started += instance.OnRoll;
+                @Roll.performed += instance.OnRoll;
+                @Roll.canceled += instance.OnRoll;
             }
         }
     }
@@ -288,8 +316,9 @@ public class @Controls : IInputActionCollection, IDisposable
     }
     public interface ISpaceShipActions
     {
-        void OnRotation(InputAction.CallbackContext context);
         void OnSteering_mouse(InputAction.CallbackContext context);
         void OnFree_Look(InputAction.CallbackContext context);
+        void OnMove_Forward_Backward(InputAction.CallbackContext context);
+        void OnRoll(InputAction.CallbackContext context);
     }
 }
