@@ -670,3 +670,4 @@ InitTestScene*.unity
 *.tlog
 
 # End of https://www.toptal.com/developers/gitignore/api/unity,csharp,rider,visualstudio,vscode
+.idea/
