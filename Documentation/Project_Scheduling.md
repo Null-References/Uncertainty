@@ -4,14 +4,14 @@
 
 ### Documentation:  
 - [ ] Need Assessment - *Deadline: 2021/June/7*
-- [ ] Usecase Diagram - *Deadline: 2021/June/X*
-- [ ] Activity Diagram - *Deadline: 2021/June/X*
-- [ ] Class Diagram - *Deadline: 2021/June/X*
-- [ ] Sequence Diagram - *Deadline: 2021/June/X*
+- [ ] Usecase Diagram - *Deadline: 2021/June/9*
+- [ ] Activity Diagram - *Deadline: 2021/June/10*
+- [ ] Class Diagram - *Deadline: 2021/June/11*
+- [ ] Sequence Diagram - *Deadline: 2021/June/12*
 
 
 ### Project management:  
-- [ ] Scheduling Documentation - *Deadline: 2021/June/6*
+- [x] Scheduling Documentation - *Deadline: 2021/June/6*
 - [ ] Phasing Documentation  - *Deadline: 2021/June/6*
 
 
