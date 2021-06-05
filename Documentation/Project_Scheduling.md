@@ -22,7 +22,12 @@
 - [ ] Enemies System - *Deadline: 2021/June/X*
 - [ ] Level Design - *Deadline: 2021/June/X*
 - [ ] Boss-Fight Design - *Deadline: 2021/June/X*
+- [ ] UI Mockup - *Deadline: 2021/June/X*
+- [ ] Testing - *Deadline: 2021/June/X*
 
 
 ### Art Design & Modeling:
 - [ ] Boss model - *Deadline: 2021/June/X*
+- [ ] Enemy model - *Deadline: 2021/June/X*
+- [ ] Level Envionment Design - *Deadline: 2021/June/X*
+- [ ] Level Model Assets - *Deadline: 2021/June/X*
