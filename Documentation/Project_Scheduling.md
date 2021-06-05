@@ -18,16 +18,16 @@
 ### Game Development:
 - [x] Ship Controller - *Deadline: 2021/June/1*
 - [x] Camera Rig - *Deadline: 2021/June/1*
-- [ ] Shooting System - *Deadline: 2021/June/X*
-- [ ] Enemies System - *Deadline: 2021/June/X*
-- [ ] Level Design - *Deadline: 2021/June/X*
-- [ ] Boss-Fight Design - *Deadline: 2021/June/X*
-- [ ] UI Mockup - *Deadline: 2021/June/X*
+- [ ] Shooting System - *Deadline: 2021/June/7*
+- [ ] Enemies System - *Deadline: 2021/June/10*
+- [ ] Level Design - *Deadline: 2021/June/11*
+- [ ] UI Mockup - *Deadline: 2021/June/11*
+- [ ] Boss-Fight Design - *Deadline: 2021/June/12*
 - [ ] Testing - *Deadline: 2021/June/X*
 
 
 ### Art Design & Modeling:
-- [ ] Boss model - *Deadline: 2021/June/X*
-- [ ] Enemy model - *Deadline: 2021/June/X*
-- [ ] Level Envionment Design - *Deadline: 2021/June/X*
-- [ ] Level Model Assets - *Deadline: 2021/June/X*
+- [ ] Level Envionment Concept Art - *Deadline: 2021/June/7*
+- [ ] Boss model - *Deadline: 2021/June/9*
+- [ ] Enemy model - *Deadline: 2021/June/9*
+- [ ] Level Model Assets - *Deadline: 2021/June/10*
