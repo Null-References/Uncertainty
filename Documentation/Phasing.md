@@ -1,5 +1,12 @@
-<h3 align="center">Uncertainty:</h3>
-<h1 align="center"> Project Phasing </h1>
+<br />
+<p align="center">
+
+  <h3 align="center">Uncertainty:</h3>
+
+   <h1 align="center"> Project Phasing </h1>
+    
+  <p h2 align="center">
+    <br />
 
 _We need to clarify something first_   
 The game story is not complete, and as a result, some aspects of planning cannot be performed accurately the story's main characters, for instance, need some work
