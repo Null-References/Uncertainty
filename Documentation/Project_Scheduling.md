@@ -1,4 +1,5 @@
-# Project Scheduling documentation  
+<h3 align="center">Uncertainty:</h3>
+<h1 align="center"> Project Scheduling documentation </h1>  
 
 - [x] Project Deadlines - *Deadline: 2021/June/6*
 - [ ] Project Delivery - *Deadline: 2021/July/1*
