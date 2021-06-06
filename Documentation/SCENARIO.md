@@ -1,5 +1,13 @@
- <h3 align="center">Uncertainty:</h3>
- <h1 align="center"> Scenario </h1>
+ <br />
+<p align="center">
+  
+  <h3 align="center">Uncertainty:</h3>
+
+   <h1 align="center"> Scenario </h1>
+    
+  <p h2 align="center">
+    <br />
+
 
   ### Goals :
   - In this project, we aim to develop a space shooter action-adventure game based on boss fight mechanics.
