@@ -61,7 +61,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 
 #### Project Management:  
 - Project Phasing documentation: [Link (ToDo)]() 
-- Project Scheduling documentation: [Link (In Progress)](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md) 
+- Project Scheduling documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md) 
 
 
 ## Project Members:  
