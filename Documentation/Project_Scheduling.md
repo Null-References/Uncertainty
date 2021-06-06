@@ -1,6 +1,7 @@
 # Project Scheduling documentation  
 
-- [x] Project Deadline - *Deadline: 2021/July/1*
+- [x] Project Deadlines - *Deadline: 2021/June/6*
+- [ ] Project Delivery - *Deadline: 2021/July/1*
 
 ### Documentation:  
 - [ ] Need Assessment - *Deadline: 2021/June/7*
