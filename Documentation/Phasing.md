@@ -1,5 +1,7 @@
-#  Project Phasing
-_We need to clarify something first_ 
+<h3 align="center">Uncertainty:</h3>
+<h1 align="center"> Project Phasing </h1>
+
+_We need to clarify something first_   
 The game story is not complete, and as a result, some aspects of planning cannot be performed accurately the story's main characters, for instance, need some work
 the game's mechanics and gameplay are OK, however
 another thing to mention is that ,this document is mainly for demo version and mainly about what are we gonna do and how
