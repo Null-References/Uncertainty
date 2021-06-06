@@ -21,7 +21,7 @@
 
 ### Project management:  
 - [x] Scheduling Documentation - *Deadline: 2021/June/6*
-- [ ] Phasing Documentation  - *Deadline: 2021/June/6*
+- [x] Phasing Documentation  - *Deadline: 2021/June/6*
 
 
 ### Game Development:
