@@ -1,6 +1,6 @@
 # Project Scheduling documentation  
 
-- [ ] Project Deadline - *Deadline: 2021/July/1*
+- [x] Project Deadline - *Deadline: 2021/July/1*
 
 ### Documentation:  
 - [ ] Need Assessment - *Deadline: 2021/June/7*
@@ -23,6 +23,7 @@
 - [ ] Level Design - *Deadline: 2021/June/11*
 - [ ] UI Mockup - *Deadline: 2021/June/11*
 - [ ] Boss-Fight Design - *Deadline: 2021/June/12*
+- [ ] Cleaning-Refactoring - *Deadline: 2021/June/13*
 - [ ] Testing - *Deadline: 2021/June/13*
 
 
