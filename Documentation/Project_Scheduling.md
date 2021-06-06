@@ -23,7 +23,7 @@
 - [ ] Level Design - *Deadline: 2021/June/11*
 - [ ] UI Mockup - *Deadline: 2021/June/11*
 - [ ] Boss-Fight Design - *Deadline: 2021/June/12*
-- [ ] Testing - *Deadline: 2021/June/X*
+- [ ] Testing - *Deadline: 2021/June/13*
 
 
 ### Art Design & Modeling:
