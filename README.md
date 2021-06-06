@@ -60,7 +60,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Sequence Diagram: [Link (ToDo)]()  
 
 #### Project Management:  
-- Project Phasing documentation: [Link (ToDo)]() 
+- Project Phasing documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md) 
 - Project Scheduling documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md) 
 
 
