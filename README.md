@@ -42,16 +42,16 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - There is a bossfight in the level
 
 #### Non-Functional Requirements:  
-- Performance
-- Scalability 
-- Reliability
+- Performance - In order to ensure smooth lagging-free performance on all computers, the game must be optimized
+- Scalability - Software Architecture must be designed in such a way that the game can be expanded later on
+- Reliability - The game should not crash or present any issues that cause it to malfunction
 
 
 ## Project Documentation:  
 
 #### Needs assessment and project scenario:  
-- Project Scenario: [Link](https://github.com/Null-References/Uncertainty/blob/main/Documentation/SCENARIO.md)
-- Project Needs assessment: [Link (In Progress)](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/NEEDS_ASSESSMENT.md)  
+- Project Scenario: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/SCENARIO.md)
+- Project Needs assessment & Requirements: [Link (In Progress)](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/NEEDS_ASSESSMENT.md)  
 
 #### Project Analysis and Design:
 - Usecase Diagram: [Link (ToDo)]()
@@ -60,7 +60,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Sequence Diagram: [Link (ToDo)]()  
 
 #### Project Management:  
-- Project Phasing documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md) 
+- Project Phasing documentation: [Link (In Progress)](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md) 
 - Project Scheduling documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md) 
 
 
