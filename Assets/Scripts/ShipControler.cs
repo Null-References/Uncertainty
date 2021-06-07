@@ -57,7 +57,7 @@ public class ShipControler : MonoBehaviour
         shipModel.localRotation = Quaternion.Lerp(
                                                             shipModel.localRotation,
                                                             targetRotation,
-                                                            Timer.deltaTime * fancinessSpeed
+                                                            Time.deltaTime * fancinessSpeed
                                                             );
     }
 }
