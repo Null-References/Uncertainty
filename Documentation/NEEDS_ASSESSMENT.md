@@ -58,10 +58,22 @@ We can talk about major concerns now that we know what our goals are:
 5. An inferior quality of art and design can devalue a game and make it forgotten
 
 
+### STEP 3: Determine Need Indicators:  
+It is evident from past failures that major concerns are very real and we must handle them carefully  
+Games are complicated and they have complex systems, so without a good software architecture they are bound to fail  
+To deliver the project on time, time management is essential  
 
 
+### STEP 4: Consider Data Sources:  
+* Youtube
+* Unity Forums 
+* Google :)
+* Any website related to Game development & Software Engineering 
 
-#### Target market segment characteristics:  
+
+### Phase II: Data Gathering & Analysis
+
+### STEP 1: Determine Target Groups:  
 We have found that certain market segments are much more likely to play Uncertainty.  
 According to our research, the following characteristics were found in most potential players:  
 
@@ -70,5 +82,7 @@ According to our research, the following characteristics were found in most pote
 3. The open-source community 
 4. Those who are interested in learning how to make games like this
 5. Science-fiction enthusiast 
+
+
 
 
