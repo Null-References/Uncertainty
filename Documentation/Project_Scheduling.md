@@ -12,7 +12,7 @@
 - [ ] Project Delivery - *Deadline: 2021/July/1*
 
 ### Documentation:  
-- [ ] Need Assessment - *Deadline: 2021/June/7*
+- [x] Need Assessment - *Deadline: 2021/June/7*
 - [ ] Usecase Diagram - *Deadline: 2021/June/9*
 - [ ] Activity Diagram - *Deadline: 2021/June/10*
 - [ ] Class Diagram - *Deadline: 2021/June/11*
