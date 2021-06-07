@@ -38,11 +38,12 @@ In this section, we will identify and assess our requirements as well as to cond
 
 ### Phase I: Explore “What Is”  
 
-### STEP 1: Prepare Management Plan:  
-* Project Phases: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md)
-* Project Schedule: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md)
+#### STEP 1: Prepare Management Plan:  
+* Project Milestones: [Link](https://github.com/Null-References/Uncertainty/milestones)
+* Project Open Issues: [Link](https://github.com/Null-References/Uncertainty/issues?q=is%3Aopen+is%3Aissue)
+* Project Closed Issues: [Link](https://github.com/Null-References/Uncertainty/issues?q=is%3Aissue+is%3Aclosed)
 
-### STEP 2: Identify Major Concerns:  
+#### STEP 2: Identify Major Concerns:  
 Prior to discussing major issues, we need to clarify our goals:  
 1. Making a game that people enjoy playing
 2. Learning how to develop scalable games using software engineering techniques
@@ -58,13 +59,13 @@ We can talk about major concerns now that we know what our goals are:
 5. An inferior quality of art and design can devalue a game and make it forgotten
 
 
-### STEP 3: Determine Need Indicators:  
+#### STEP 3: Determine Need Indicators:  
 It is evident from past failures that major concerns are very real and we must handle them carefully  
 Games are complicated and they have complex systems, so without a good software architecture they are bound to fail  
 To deliver the project on time, time management is essential  
 
 
-### STEP 4: Consider Data Sources:  
+#### STEP 4: Consider Data Sources:  
 * Youtube
 * Unity Forums 
 * Google :)
@@ -73,7 +74,7 @@ To deliver the project on time, time management is essential
 
 ### Phase II: Data Gathering & Analysis
 
-### STEP 1: Determine Target Groups:  
+#### STEP 1: Determine Target Groups:  
 We have found that certain market segments are much more likely to play Uncertainty.  
 According to our research, the following characteristics were found in most potential players:  
 
@@ -84,5 +85,32 @@ According to our research, the following characteristics were found in most pote
 5. Science-fiction enthusiast 
 
 
+#### STEP 2: Gather Data to Define Needs:  
+Our desired outcome is to make a game anyone can enjoy and have fun with it,  
+Games are more than just a game, they can teach you things, inspire you, and possibly change your life.  
+* *You can read more about our gathered data in Scenario and phasing Documents, and requirements section of this document*
 
 
+### Phase III: Decision-making
+
+
+#### STEP 1: Set Priority of Needs:  
+
+1. Scalability - Software Architecture must be designed in such a way that the game can be expanded later on 
+2. The player can move the spaceship
+3. The player can fight enemies likewise, vice versa..
+4. Enemies are smart enough to keep the game interesting and challenging
+5. Performance - In order to ensure smooth lagging-free performance on all computers, the game must be optimized 
+6. There is a bossfight in the level
+7. Reliability - The game should not crash or present any issues that cause it to malfunction
+8. The player can use in-game abilities to influence the gameplay
+9. The user interface of the game must be appealing to the player
+10. The User Experience must be designed in such a way that the player can easily learn the game
+11. The player can customize the game settings to their liking
+12. An in-game Scene is used to choose and start a new mission  
+13. Patches and bug fixes must be provided after the release of the game  
+
+
+#### STEP 2: Propose Action Plan:  
+* Project Phases: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md)
+* Project Schedule: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md)
