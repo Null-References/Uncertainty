@@ -96,19 +96,19 @@ Games are more than just a game, they can teach you things, inspire you, and pos
 
 #### STEP 1: Set Priority of Needs:  
 
-1. Scalability - Software Architecture must be designed in such a way that the game can be expanded later on 
-2. The player can move the spaceship
-3. The player can fight enemies likewise, vice versa..
-4. Enemies are smart enough to keep the game interesting and challenging
-5. Performance - In order to ensure smooth lagging-free performance on all computers, the game must be optimized 
-6. There is a bossfight in the level
-7. Reliability - The game should not crash or present any issues that cause it to malfunction
-8. The player can use in-game abilities to influence the gameplay
-9. The user interface of the game must be appealing to the player
-10. The User Experience must be designed in such a way that the player can easily learn the game
-11. The player can customize the game settings to their liking
-12. An in-game Scene is used to choose and start a new mission  
-13. Patches and bug fixes must be provided after the release of the game  
+1. Scalability
+2. Ship controller
+3. Shooting system
+4. Enemy AI
+5. Performance
+6. BossFight mechanics
+7. Reliability
+8. Ability system
+9. Game UI
+10. Game UX
+11. Custom setings
+12. Interactive and live scenes to follow the story  
+13. Bug fix and game support 
 
 
 #### STEP 2: Propose Action Plan:  
