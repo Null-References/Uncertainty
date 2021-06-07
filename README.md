@@ -50,9 +50,9 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 ## Project Documentation:  
 
 #### Needs assessment and project scenario:  
-- Project Scenario: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/SCENARIO.md)
-- Project Needs assessment & Requirements: [Link (In Progress)](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/NEEDS_ASSESSMENT.md)  
-
+- Project Scenario: [Link](Documentation/SCENARIO.md)
+- Project Needs assessment: [Link](Documentation/NEEDS_ASSESSMENT.md)  
+- Project Requirements: [Link](Documentation/Requirements.md)
 #### Project Analysis and Design:
 - Usecase Diagram: [Link (ToDo)]()
 - Activity Diagram: [Link (ToDo)]()
@@ -60,8 +60,8 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Sequence Diagram: [Link (ToDo)]()  
 
 #### Project Management:  
-- Project Phasing documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md) 
-- Project Scheduling documentation: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md) 
+- Project Phasing documentation: [Link](Documentation/Phasing.md) 
+- Project Scheduling documentation: [Link](Documentation/Project_Scheduling.md) 
 
 
 ## Project Members:  
