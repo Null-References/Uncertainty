@@ -41,7 +41,7 @@ public class ShipControler : MonoBehaviour
 
     private void Move()
     {
-        _rb.AddForce(transform.forward * _inputHandler.GetMoveValue * moveSpeed);
+        _rb.AddForce(transform.forward * (_inputHandler.GetMoveValue * moveSpeed));
     }
     private void Rotate()
     {
@@ -57,7 +57,7 @@ public class ShipControler : MonoBehaviour
         shipModel.localRotation = Quaternion.Lerp(
                                                             shipModel.localRotation,
                                                             targetRotation,
-                                                            Time.deltaTime * fancinessSpeed
+                                                            Timer.deltaTime * fancinessSpeed
                                                             );
     }
 }
