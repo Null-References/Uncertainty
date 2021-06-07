@@ -10,8 +10,7 @@
     <br />
     
 
-
-Here, we will identify and assess our requirements as well as conduct a needs assessment.
+In this section, we will identify and assess our requirements as well as to conduct a needs assessment.
 
 
 
@@ -36,4 +35,40 @@ Here, we will identify and assess our requirements as well as conduct a needs as
 
 
 ## Needs Assessment  
+
+### Phase I: Explore “What Is”  
+
+### STEP 1: Prepare Management Plan:  
+* Project Phases: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Phasing.md)
+* Project Schedule: [Link](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Project_Scheduling.md)
+
+### STEP 2: Identify Major Concerns:  
+Prior to discussing major issues, we need to clarify our goals:  
+1. Making a game that people enjoy playing
+2. Learning how to develop scalable games using software engineering techniques
+3. Acquiring industry recognition 
+4. To test our abilities and potential
+5. Making Art
+
+We can talk about major concerns now that we know what our goals are:  
+1. Project failure - In the absence of proper planning and management, our project could fail and never be completed  
+2. Even if the game is finished, it might never get a lot of players due to the insufficiency of it being fun
+3. An unreliable software architecture can make the game unscalable 
+4. Mismanagement can interfere with decision-making and development 
+5. An inferior quality of art and design can devalue a game and make it forgotten
+
+
+
+
+
+#### Target market segment characteristics:  
+We have found that certain market segments are much more likely to play Uncertainty.  
+According to our research, the following characteristics were found in most potential players:  
+
+1. People in the age range of 14 to 25
+2. Gamers who are interested in independent games
+3. The open-source community 
+4. Those who are interested in learning how to make games like this
+5. Science-fiction enthusiast 
+
 
