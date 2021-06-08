@@ -37,7 +37,7 @@
 
 
 ### Art Design & Modeling:
-- [ ] Level Envionment Concept Art - *Deadline: 2021/June/7*
+- [x] Level Envionment Concept Art - *Deadline: 2021/June/7*
 - [ ] Boss model - *Deadline: 2021/June/9*
 - [ ] Enemy model - *Deadline: 2021/June/9*
 - [ ] Level Model Assets - *Deadline: 2021/June/10*
