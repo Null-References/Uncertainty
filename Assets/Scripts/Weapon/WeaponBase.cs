@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-[RequireComponent(typeof(ProjectilePool))]
+[RequireComponent(typeof(SimpleProjectilePool))]
 public class WeaponBase : MonoBehaviour
 {
     [SerializeField] private float damage;
@@ -23,7 +23,10 @@ public class WeaponBase : MonoBehaviour
         _timer.Tick(Time.deltaTime);
         if (_timer.IsReady())
         {
-            ProjectilePool.Instance.Get();
+            var projectile = SimpleProjectilePool.Instance.Get();
+            projectile.transform.position = shotPoint.position;
+            projectile.transform.rotation = shotPoint.rotation;
+            projectile.gameObject.SetActive(true);
         }
     }
 }

@@ -11,6 +11,10 @@ public abstract class CustomTimer
         Duration = duration;
        _remainingTime = duration;
     }
+    public void ResetTimer()
+    {
+        _remainingTime = Duration;
+    }
 
     public abstract void Tick(float deltaTime);
 

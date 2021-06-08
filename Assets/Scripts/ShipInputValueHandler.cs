@@ -24,6 +24,10 @@ public class ShipInputValueHandler : MonoBehaviour
     {
         _controls.Disable();
     }
+    public bool GetShootInput() 
+    {
+        return _controls.SpaceShip.Shoot.triggered;
+    }
     private void ToggleFreeLook() // triggered by Free_Look on controls asset
     {
         _isFreeLook = !_isFreeLook;
