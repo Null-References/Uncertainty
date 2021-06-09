@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5184951350014699952}
   - component: {fileID: 5184951350014699955}
-  - component: {fileID: 5184951350014699953}
+  - component: {fileID: 5720214559300918345}
   m_Layer: 0
   m_Name: BasicWeapon
   m_TagString: Untagged
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2797214264875072483, guid: 612717653942e694a81bb90388af817a, type: 3}
---- !u!114 &5184951350014699953
+--- !u!114 &5720214559300918345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,10 +55,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5184951350014699958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b40a606edcb5446a8087adc53aa84b, type: 3}
+  m_Script: {fileID: 11500000, guid: 91e5d4ac443c41b79b8200188eea50fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   fireRate: 0.1
   shotPoint: {fileID: 5184951350450290254}
 --- !u!1 &5184951350450290255
