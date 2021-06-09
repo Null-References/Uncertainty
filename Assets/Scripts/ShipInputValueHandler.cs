@@ -26,7 +26,7 @@ public class ShipInputValueHandler : MonoBehaviour
     }
     public bool GetShootInput() 
     {
-        return _controls.SpaceShip.Shoot.triggered;
+        return _controls.SpaceShip.Shoot.ReadValue<float>() > .1f;
     }
     private void ToggleFreeLook() // triggered by Free_Look on controls asset
     {

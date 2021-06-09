@@ -13,12 +13,7 @@ public class WeaponBase : MonoBehaviour
         _timer = new RepeatableTimer(fireRate);
     }
 
-    private void Update()
-    {
-        Shoot();
-    }
-
-    private void Shoot()
+    public void Shoot()
     {
         _timer.Tick(Time.deltaTime);
         if (_timer.IsReady())
