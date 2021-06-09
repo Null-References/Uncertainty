@@ -47003,6 +47003,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 340203003}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1583888595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+    type: 3}
+  m_PrefabInstance: {fileID: 5184951350878732237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1584208276 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6761581608914996580, guid: ee754fb53c16e1a43b91a9a2c46040f2,
@@ -62974,6 +62980,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: BasicWeapon
       objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184951350450290254, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720214559300918345, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad928fb35a1bc0d4ea1129d9f2783728, type: 3}
 --- !u!4 &5326042831813358202
@@ -63228,6 +63274,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 382334190}
+  cam: {fileID: 6978776648824570205}
+  shopPoint: {fileID: 1583888595}
+  aimCircleBiggness: 100
 --- !u!54 &6978776649794093687
 Rigidbody:
   m_ObjectHideFlags: 0
