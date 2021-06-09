@@ -63178,6 +63178,7 @@ MonoBehaviour:
   shipModel: {fileID: 6978776649048392619}
   moveSpeed: 15
   torqueSpeed: 0.15
+  aimingTorqueSpeed: 0.06
   rollSpeed: 1
   rollFanciness: 19.4
   pitchFanciness: 19.2

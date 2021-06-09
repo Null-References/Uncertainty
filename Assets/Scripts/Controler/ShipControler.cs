@@ -8,6 +8,7 @@ public class ShipControler : MonoBehaviour
     [Header("Physic")]
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float torqueSpeed = 1f;
+    [SerializeField] private float aimingTorqueSpeed = 1f;
     [SerializeField] private float rollSpeed = 1f;
 
     [Header("Visual")]
@@ -21,6 +22,7 @@ public class ShipControler : MonoBehaviour
     private Rigidbody _rb = null;
     private ShipInputValueHandler _inputHandler;
     private Vector2 _mouseValue = Vector2.zero;
+    private float _currentTorqueSpeed;
 
     private void Start()
     {
@@ -35,18 +37,19 @@ public class ShipControler : MonoBehaviour
     private void Update()
     {
         _mouseValue = _inputHandler.GetMouseValue();
+        Aim();
 
         VisualRotate();
     }
 
-    private void Move()
-    {
-        _rb.AddForce(transform.forward * (_inputHandler.GetMoveValue * moveSpeed));
-    }
+    private void Aim() => _currentTorqueSpeed = _inputHandler.GetAimingInput() ? aimingTorqueSpeed : torqueSpeed;
+
+    private void Move() => _rb.AddForce(transform.forward * (_inputHandler.GetMoveValue * moveSpeed));
+
     private void Rotate()
     {
         //Physic part
-        var torque = _mouseValue * torqueSpeed;
+        var torque = _mouseValue * _currentTorqueSpeed;
         var roll = _inputHandler.GetRollValue * rollSpeed;
         _rb.AddRelativeTorque(-torque.y, torque.x, -roll, ForceMode.VelocityChange);
     }
