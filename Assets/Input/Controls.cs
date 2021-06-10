@@ -49,6 +49,22 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""1cd9bc77-e24a-4d6e-8521-5008c1cd3514"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Aiming"",
+                    ""type"": ""Button"",
+                    ""id"": ""8116b163-f9e9-49a0-9423-f67b8e4d24cb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Hold""
                 }
             ],
             ""bindings"": [
@@ -139,6 +155,28 @@ public class @Controls : IInputActionCollection, IDisposable
                     ""action"": ""Roll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""deed355a-8a80-4391-9f0d-77363cca2af7"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": ""Mouse"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""22b72716-03ce-435b-bd4b-1f15cf0e47c1"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": ""Mouse"",
+                    ""action"": ""Aiming"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +223,8 @@ public class @Controls : IInputActionCollection, IDisposable
         m_SpaceShip_Free_Look = m_SpaceShip.FindAction("Free_Look", throwIfNotFound: true);
         m_SpaceShip_Move_Forward_Backward = m_SpaceShip.FindAction("Move_Forward_Backward", throwIfNotFound: true);
         m_SpaceShip_Roll = m_SpaceShip.FindAction("Roll", throwIfNotFound: true);
+        m_SpaceShip_Shoot = m_SpaceShip.FindAction("Shoot", throwIfNotFound: true);
+        m_SpaceShip_Aiming = m_SpaceShip.FindAction("Aiming", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -238,6 +278,8 @@ public class @Controls : IInputActionCollection, IDisposable
     private readonly InputAction m_SpaceShip_Free_Look;
     private readonly InputAction m_SpaceShip_Move_Forward_Backward;
     private readonly InputAction m_SpaceShip_Roll;
+    private readonly InputAction m_SpaceShip_Shoot;
+    private readonly InputAction m_SpaceShip_Aiming;
     public struct SpaceShipActions
     {
         private @Controls m_Wrapper;
@@ -246,6 +288,8 @@ public class @Controls : IInputActionCollection, IDisposable
         public InputAction @Free_Look => m_Wrapper.m_SpaceShip_Free_Look;
         public InputAction @Move_Forward_Backward => m_Wrapper.m_SpaceShip_Move_Forward_Backward;
         public InputAction @Roll => m_Wrapper.m_SpaceShip_Roll;
+        public InputAction @Shoot => m_Wrapper.m_SpaceShip_Shoot;
+        public InputAction @Aiming => m_Wrapper.m_SpaceShip_Aiming;
         public InputActionMap Get() { return m_Wrapper.m_SpaceShip; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -267,6 +311,12 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Roll.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRoll;
                 @Roll.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRoll;
                 @Roll.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnRoll;
+                @Shoot.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnShoot;
+                @Aiming.started -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnAiming;
+                @Aiming.performed -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnAiming;
+                @Aiming.canceled -= m_Wrapper.m_SpaceShipActionsCallbackInterface.OnAiming;
             }
             m_Wrapper.m_SpaceShipActionsCallbackInterface = instance;
             if (instance != null)
@@ -283,6 +333,12 @@ public class @Controls : IInputActionCollection, IDisposable
                 @Roll.started += instance.OnRoll;
                 @Roll.performed += instance.OnRoll;
                 @Roll.canceled += instance.OnRoll;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+                @Aiming.started += instance.OnAiming;
+                @Aiming.performed += instance.OnAiming;
+                @Aiming.canceled += instance.OnAiming;
             }
         }
     }
@@ -320,5 +376,7 @@ public class @Controls : IInputActionCollection, IDisposable
         void OnFree_Look(InputAction.CallbackContext context);
         void OnMove_Forward_Backward(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnAiming(InputAction.CallbackContext context);
     }
 }

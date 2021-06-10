@@ -15,19 +15,17 @@ public class ShipInputValueHandler : MonoBehaviour
          _controls.SpaceShip.Free_Look.performed += _ => ToggleFreeLook();
     }
 
-    private void OnEnable()
-    {
-        _controls.Enable();
-    }
+    private void OnEnable() => _controls.Enable();
 
-    private void OnDisable()
-    {
-        _controls.Disable();
-    }
-    private void ToggleFreeLook() // triggered by Free_Look on controls asset
-    {
-        _isFreeLook = !_isFreeLook;
-    }
+    private void OnDisable() => _controls.Disable();
+    
+    public bool GetShootInput() => _controls.SpaceShip.Shoot.ReadValue<float>() > .1f;
+
+    public bool GetAimingInput() => _controls.SpaceShip.Aiming.ReadValue<float>() > .1f;
+
+    // triggered by Free_Look on controls asset
+    private void ToggleFreeLook() => _isFreeLook = !_isFreeLook;
+
     public Vector2 GetMouseValue() 
     {
         if (_isFreeLook)            //TODO: this is dirty .maybe its own class just for camera
