@@ -38,6 +38,6 @@
 
 ### Art Design & Modeling:
 - [x] Level Envionment Concept Art - *Deadline: 2021/June/7*
-- [ ] Boss model - *Deadline: 2021/June/9*
-- [ ] Enemy model - *Deadline: 2021/June/9*
-- [ ] Level Model Assets - *Deadline: 2021/June/10*
+- [x] Enemy model - *Deadline: 2021/June/11*
+- [ ] Boss model - *Deadline: 2021/June/12*
+- [ ] Level Model Assets - *Deadline: 2021/June/12*
