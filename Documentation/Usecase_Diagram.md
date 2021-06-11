@@ -8,5 +8,12 @@
 <p h2 align="center">
 <br />
     
-![Menu Diagram](https://github.com/Null-References/Uncertainty/blob/Develop/Documentation/Usecase_Diagram_pictures/Menu_UseCase.png)
+* *We have divided our use cases into three sections*
 
+### i. Menu:   
+    
+![Menu Diagram](Usecase_Diagram_pictures/Menu_UseCase.png)
+
+### 2. Home base:  
+
+![Homebase Diagram](Usecase_Diagram_pictures/HomeBase_UseCase.png)
