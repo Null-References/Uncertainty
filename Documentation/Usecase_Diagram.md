@@ -10,7 +10,7 @@
     
 * *We have divided our use cases into three sections*
 
-### i. Menu:   
+### 1. Menu:   
     
 ![Menu Diagram](Usecase_Diagram_pictures/Menu_UseCase.png)
 
