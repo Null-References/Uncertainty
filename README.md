@@ -54,7 +54,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Project Needs assessment: [Link](Documentation/NEEDS_ASSESSMENT.md)  
 - Project Requirements: [Link](Documentation/Requirements.md)
 #### Project Analysis and Design:
-- Usecase Diagram: [Link (In Progress)](Documentation/Usecase_Diagram.md)
+- Usecase Diagram: [Link](Documentation/Usecase_Diagram.md)
 - Activity Diagram: [Link (ToDo)]()
 - Class Diagram: [Link (ToDo)]()
 - Sequence Diagram: [Link (ToDo)]()  
