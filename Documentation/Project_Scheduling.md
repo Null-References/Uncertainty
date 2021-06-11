@@ -27,7 +27,7 @@
 ### Game Development:
 - [x] Ship Controller - *Deadline: 2021/June/1*
 - [x] Camera Rig - *Deadline: 2021/June/1*
-- [ ] Shooting System - *Deadline: 2021/June/7*
+- [x] Shooting System - *Deadline: 2021/June/7*
 - [ ] Enemies System - *Deadline: 2021/June/10*
 - [ ] Level Design - *Deadline: 2021/June/11*
 - [ ] UI Mockup - *Deadline: 2021/June/11*
