@@ -13,7 +13,7 @@
 
 ### Documentation:  
 - [x] Need Assessment - *Deadline: 2021/June/7*
-- [ ] Usecase Diagram - *Deadline: 2021/June/11*
+- [x] Usecase Diagram - *Deadline: 2021/June/11*
 - [ ] Activity Diagram - *Deadline: 2021/June/12*
 - [ ] Class Diagram - *Deadline: 2021/June/13*
 - [ ] Sequence Diagram - *Deadline: 2021/June/14*
