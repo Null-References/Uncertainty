@@ -13,10 +13,10 @@
 
 ### Documentation:  
 - [x] Need Assessment - *Deadline: 2021/June/7*
-- [ ] Usecase Diagram - *Deadline: 2021/June/9*
-- [ ] Activity Diagram - *Deadline: 2021/June/10*
-- [ ] Class Diagram - *Deadline: 2021/June/11*
-- [ ] Sequence Diagram - *Deadline: 2021/June/12*
+- [ ] Usecase Diagram - *Deadline: 2021/June/11*
+- [ ] Activity Diagram - *Deadline: 2021/June/12*
+- [ ] Class Diagram - *Deadline: 2021/June/13*
+- [ ] Sequence Diagram - *Deadline: 2021/June/14*
 
 
 ### Project management:  
@@ -28,12 +28,12 @@
 - [x] Ship Controller - *Deadline: 2021/June/1*
 - [x] Camera Rig - *Deadline: 2021/June/1*
 - [x] Shooting System - *Deadline: 2021/June/7*
-- [ ] Enemies System - *Deadline: 2021/June/10*
-- [ ] Level Design - *Deadline: 2021/June/11*
-- [ ] UI Mockup - *Deadline: 2021/June/11*
-- [ ] Boss-Fight Design - *Deadline: 2021/June/12*
-- [ ] Cleaning-Refactoring - *Deadline: 2021/June/13*
-- [ ] Testing - *Deadline: 2021/June/13*
+- [ ] Enemies System - *Deadline: 2021/June/11*
+- [ ] Level Design - *Deadline: 2021/June/12*
+- [ ] UI Mockup - *Deadline: 2021/June/12*
+- [ ] Boss-Fight Design - *Deadline: 2021/June/13*
+- [ ] Cleaning-Refactoring - *Deadline: 2021/June/14*
+- [ ] Testing - *Deadline: 2021/June/14*
 
 
 ### Art Design & Modeling:
