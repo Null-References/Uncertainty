@@ -17,3 +17,6 @@
 ### 2. Home base:  
 
 ![Homebase Diagram](Usecase_Diagram_pictures/HomeBase_UseCase.png)
+
+### 3. Mission:   
+![mission](Usecase_Diagram_pictures/Mission_UseCase.png)
