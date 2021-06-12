@@ -14,9 +14,9 @@
 ### Documentation:  
 - [x] Need Assessment - *Deadline: 2021/June/7*
 - [x] Usecase Diagram - *Deadline: 2021/June/11*
-- [ ] Activity Diagram - *Deadline: 2021/June/12*
-- [ ] Class Diagram - *Deadline: 2021/June/13*
-- [ ] Sequence Diagram - *Deadline: 2021/June/14*
+- [ ] Activity Diagram - *Deadline: 2021/June/13*
+- [ ] Class Diagram - *Deadline: 2021/June/14*
+- [ ] Sequence Diagram - *Deadline: 2021/June/15*
 
 
 ### Project management:  
@@ -28,16 +28,16 @@
 - [x] Ship Controller - *Deadline: 2021/June/1*
 - [x] Camera Rig - *Deadline: 2021/June/1*
 - [x] Shooting System - *Deadline: 2021/June/7*
-- [ ] Enemies System - *Deadline: 2021/June/11*
-- [ ] Level Design - *Deadline: 2021/June/12*
-- [ ] UI Mockup - *Deadline: 2021/June/12*
-- [ ] Boss-Fight Design - *Deadline: 2021/June/13*
-- [ ] Cleaning-Refactoring - *Deadline: 2021/June/14*
-- [ ] Testing - *Deadline: 2021/June/14*
+- [ ] Enemies System - *Deadline: 2021/June/13*
+- [ ] Level Design - *Deadline: 2021/June/13*
+- [ ] UI Mockup - *Deadline: 2021/June/14*
+- [ ] Boss-Fight Design - *Deadline: 2021/June/14*
+- [ ] Cleaning-Refactoring - *Deadline: 2021/June/15*
+- [ ] Testing - *Deadline: 2021/June/15*
 
 
 ### Art Design & Modeling:
 - [x] Level Envionment Concept Art - *Deadline: 2021/June/7*
 - [x] Enemy model - *Deadline: 2021/June/11*
-- [ ] Boss model - *Deadline: 2021/June/12*
-- [ ] Level Model Assets - *Deadline: 2021/June/12*
+- [ ] Boss model - *Deadline: 2021/June/14*
+- [ ] Level Model Assets - *Deadline: 2021/June/14*
