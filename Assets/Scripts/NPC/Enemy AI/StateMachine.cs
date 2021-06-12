@@ -12,6 +12,10 @@
  
         public void Update()
         {
-                if (_currentState != null) _currentState.Execute();
+             //   if (_currentState != null) _currentState.Execute();
         }
+    public void Tick()
+    {
+
+    }
 }

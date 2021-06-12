@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Idle_Fly
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7792550442916979247}
@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 6336178055975334986, guid: 82264aff6fab8f64fb26431f0dff2c96,
+  m_Motion: {fileID: 6336178055975334986, guid: 16c369cd2bdd99e47a252e7c3a0c677c,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -36,7 +36,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shoot
-  m_Speed: 1
+  m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4281276055807155173}
@@ -49,7 +49,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 1300770197434942443, guid: 82264aff6fab8f64fb26431f0dff2c96,
+  m_Motion: {fileID: 1300770197434942443, guid: 16c369cd2bdd99e47a252e7c3a0c677c,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
@@ -70,7 +70,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
