@@ -14,7 +14,7 @@
 ### Documentation:  
 - [x] Need Assessment - *Deadline: 2021/June/7*
 - [x] Usecase Diagram - *Deadline: 2021/June/11*
-- [ ] Activity Diagram - *Deadline: 2021/June/13*
+- [x] Activity Diagram - *Deadline: 2021/June/13*
 - [ ] Class Diagram - *Deadline: 2021/June/14*
 - [ ] Sequence Diagram - *Deadline: 2021/June/15*
 
@@ -29,9 +29,9 @@
 - [x] Camera Rig - *Deadline: 2021/June/1*
 - [x] Shooting System - *Deadline: 2021/June/7*
 - [ ] Enemies System - *Deadline: 2021/June/13*
-- [ ] Level Design - *Deadline: 2021/June/13*
+- [ ] Level Design - *Deadline: 2021/June/14*
 - [ ] UI Mockup - *Deadline: 2021/June/14*
-- [ ] Boss-Fight Design - *Deadline: 2021/June/14*
+- [ ] Boss-Fight Design - *Deadline: 2021/June/15*
 - [ ] Cleaning-Refactoring - *Deadline: 2021/June/15*
 - [ ] Testing - *Deadline: 2021/June/15*
 
