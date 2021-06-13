@@ -12,3 +12,6 @@
 
 ### 1. Game Menu:   
 ![Game menu pic](Activity_Diagram_Pictures/Menu_Activity_Diagram.png)
+
+### 2. Home Base: 
+![homebase actpic](Activity_Diagram_Pictures/HomeBase_Activity_Diagram.png)
