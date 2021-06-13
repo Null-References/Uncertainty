@@ -15,3 +15,6 @@
 
 ### 2. Home Base: 
 ![homebase actpic](Activity_Diagram_Pictures/HomeBase_Activity_Diagram.png)
+
+### 3. Mission:
+![Mission act](Activity_Diagram_Pictures/Mission_Activity_Diagram.png)
