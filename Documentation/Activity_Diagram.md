@@ -11,4 +11,4 @@
 * *We have divided our Activity Diagrams into three sections*
 
 ### 1. Game Menu:   
-![Game menu pic](Activity_Diagram_Pictures\Menu_Activity_Diagram.png)
+![Game menu pic](Activity_Diagram_Pictures/Menu_Activity_Diagram.png)
