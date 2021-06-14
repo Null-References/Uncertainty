@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 16c369cd2bdd99e47a252e7c3a0c677c
+guid: ebc2a80c2d93d1f429f8b2a7c02f802d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: 380925857997097071
-    second: Plane.004|shoot
+      74: 9100767953879561456
+    second: Armature|Boss_idle
   - first:
       74: 6336178055975334986
     second: Armature|Idle_fly
@@ -40,6 +40,35 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Boss_idle
+      takeName: Armature|Boss_idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Armature|Idle_fly
       takeName: Armature|Idle_fly
@@ -128,7 +157,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 35
+    normalSmoothAngle: 40
     normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
