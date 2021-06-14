@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-[RequireComponent(typeof(SimpleProjectilePool))]
 public abstract class WeaponBase : MonoBehaviour
 {
     [SerializeField] private float damage;

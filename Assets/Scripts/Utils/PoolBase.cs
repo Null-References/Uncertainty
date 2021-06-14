@@ -14,7 +14,7 @@ public abstract class PoolBase<T> : MonoBehaviour where T : Component
     { 
         if (Instance != null && Instance != this) 
         { 
-            Destroy(this.gameObject);
+            Destroy(this);
             return;
         }
 
