@@ -18,11 +18,20 @@ namespace Tests
         // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
         // `yield return null;` to skip a frame.
         [UnityTest]
-        public IEnumerator FirstTestScriptWithEnumeratorPasses()
+        public IEnumerator timer_after_01_seconds()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
+            RepeatableTimer timer = new RepeatableTimer(0.1f);
+            timer.Tick(0.1f);
+            yield return new WaitForSeconds(0.1f);
+            Assert.IsTrue(timer.IsReady());
+        }
+        [UnityTest]
+        public IEnumerator timer_zero_duration()
+        {
+            RepeatableTimer timer = new RepeatableTimer(0);
+            timer.Tick(0);
             yield return null;
+            Assert.IsTrue(timer.IsReady());
         }
     }
 }
