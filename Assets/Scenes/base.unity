@@ -63151,7 +63151,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wasp
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2347432572012985880, guid: d6512c0a6ccf5b14482b9c5bceed8220, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6512c0a6ccf5b14482b9c5bceed8220, type: 3}
 --- !u!1 &4801460695435602112
 GameObject:

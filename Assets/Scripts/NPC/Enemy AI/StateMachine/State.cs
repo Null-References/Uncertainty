@@ -2,23 +2,17 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class State :MonoBehaviour, IState
+public class State : MonoBehaviour, IState
 {
     [SerializeField] private List<StateTransition> transitions;
     [SerializeField] private UnityEvent OnEnter;
     [SerializeField] private UnityEvent OnExit;
 
-    public void Enter()
-    {
-        OnEnter?.Invoke();
-    }
+    public void Enter() => OnEnter.Invoke();
 
-    public void Exit()
-    {
-        OnExit?.Invoke();
-    }
+    public void Exit() => OnExit.Invoke();
 
-    public State ProcessNextState()
+    public IState ProcessTransition()
     {
         foreach (var tran in transitions)
         {
@@ -28,11 +22,7 @@ public class State :MonoBehaviour, IState
                 return nextState;
             }
         }
-        return null;
-    }
 
-    public IState ProcessTransition()
-    {
-        throw new System.NotImplementedException();
+        return null;
     }
 }
