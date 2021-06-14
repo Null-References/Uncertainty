@@ -2,7 +2,7 @@
 {
     public IState CurrentState { get; private set; }
 
-    public StateMachine(IState startState) => ChangeState(CurrentState);
+    public StateMachine(IState startState) => ChangeState(startState);
 
     public void ChangeState(IState newState)
     {
