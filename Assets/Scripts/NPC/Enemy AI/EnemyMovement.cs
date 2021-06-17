@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -10,52 +8,21 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float timePeriod = 15f;
     [Range(0, 1)] [SerializeField] private float rotationSmoothness = 0.1f;
     [Range(0, 1)] [SerializeField] private float positionSmoothness = 0.1f;
-    [SerializeField] private Animator animator;
-    [SerializeField] private float radius = 5f;
-    
+
     private Transform _player;
     private RepeatableTimer _timer;
     private Transform _currentPoint;
-    public CurrentState _state { get; set; }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _player = GameManager.Instance.GetPlayerTransform();
         _currentPoint = transform;
         _timer = new RepeatableTimer(timePeriod);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        _timer.Tick(Time.deltaTime);
-        switch (_state)
-        {
-            case CurrentState.idle:
-                Idle();
-                break;
-            case CurrentState.patrol:
-                Patrol();
-                break;
-            case CurrentState.chasePlayer:
-                ChasePlayer();
-                break;
-        }
-    }
+    private void Update() => _timer.Tick(Time.deltaTime);
 
-    public enum CurrentState
-    {
-        idle,
-        patrol,
-        chasePlayer
-    }
 
-    public void SetState(int state)
-    {
-        _state = (CurrentState) state;
-    }
-    
     private void Idle()
     {
         if (_timer.IsReady())
@@ -68,8 +35,6 @@ public class EnemyMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, rotationSmoothness);
     }
-
-    private void SetIdleAnimation() => animator.SetBool("Shoot", false);
 
     private void Patrol()
     {
@@ -87,16 +52,10 @@ public class EnemyMovement : MonoBehaviour
 
     private void ChasePlayer()
     {
-        transform.position = Vector3.Lerp(transform.position,transform.position + ((_player.position- transform.position).normalized*speed), positionSmoothness);
+        transform.position = Vector3.Lerp(transform.position,
+            transform.position + ((_player.position - transform.position).normalized * speed), positionSmoothness);
         var targetRotation = Quaternion.LookRotation(_player.position - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSmoothness);
         //TODO: WORKS FINE BUT REFACTOR & COMPLETE THE "ELSE" & CHANGE EVERYTHING :)))))))))))
     }
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
-
 }

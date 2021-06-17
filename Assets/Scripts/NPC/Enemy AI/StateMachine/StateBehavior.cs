@@ -3,13 +3,15 @@
 public class StateBehavior : MonoBehaviour
 {
     [SerializeField] private State startState;
-    [Tooltip("the time period between each reactivision, More -> Performance++, Quality--")]
+
+    [Tooltip("the time period between each reactivation, More -> Performance++, Quality--")]
     [Range(0, 5)]
-    [SerializeField] private float offTime = 0.1f;
+    [SerializeField]
+    private float offTime = 0.1f;
 
     private StateMachine _stateMachine;
     private RepeatableTimer _timer;
-    
+
     public StateMachine StateMachine
     {
         get

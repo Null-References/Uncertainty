@@ -1,9 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using NUnit.Framework;
-using UnityEngine;
 using UnityEngine.TestTools;
-
 
 public class TimerTests
 {
@@ -13,6 +10,7 @@ public class TimerTests
     {
         // Use the Assert class to test conditions
     }
+
     [UnityTest]
     public IEnumerator Timer_After_5_Seconds()
     {

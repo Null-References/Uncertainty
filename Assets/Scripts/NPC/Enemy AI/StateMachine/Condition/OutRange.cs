@@ -1,24 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OutRange : Condition
 {
     [SerializeField] private LayerMask whatIsTarget;
     [SerializeField] private float radius = 1f;
-    [SerializeField] private Transform _center;
-    public override bool IsMet()
-    {
-        if (Physics.OverlapSphere(_center.position, radius,whatIsTarget).Length>0)
-        {
-            return false;
-        }
+    [SerializeField] private Transform center;
 
-        return true;
-    }
+    private Collider[] _colliderBuffer = new Collider[1];
+
+    public override bool IsMet() =>
+        Physics.OverlapSphereNonAlloc(center.position, radius, _colliderBuffer, whatIsTarget) <= 0;
+
     private void OnDrawGizmosSelected()
     {
+        if (!center)
+            return;
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(_center.position, radius);
+        Gizmos.DrawWireSphere(center.position, radius);
     }
 }

@@ -1,7 +1,10 @@
 ﻿public class RepeatableTimer : CustomTimer
 {
     private bool _isReady = false;
-    public RepeatableTimer(float duration) : base(duration) {}
+
+    public RepeatableTimer(float duration) : base(duration)
+    {
+    }
 
     public override void Tick(float deltaTime)
     {
@@ -10,6 +13,7 @@
         _remainingTime -= deltaTime;
         _isReady = _remainingTime <= 0 ? true : false;
     }
+
     public bool IsReady()
     {
         if (_isReady)
@@ -19,8 +23,7 @@
             _remainingTime = Duration;
             return true;
         }
+
         return false;
-        
     }
 }
-

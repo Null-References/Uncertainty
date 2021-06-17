@@ -10,12 +10,13 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this);
             return;
         }
 
         Instance = this;
         //DontDestroyOnLoad(this.gameObject);
     }
+
     public Transform GetPlayerTransform() => playerTransform;
 }
