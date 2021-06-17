@@ -14,4 +14,8 @@ public class TimeExceeded : Condition
         }
         return false;
     }
+    public void InitTimer()
+    {
+        _lastTime = Time.time;
+    }
 }

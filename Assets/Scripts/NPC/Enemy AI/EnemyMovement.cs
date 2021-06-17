@@ -87,12 +87,9 @@ public class EnemyMovement : MonoBehaviour
 
     private void ChasePlayer()
     {
-        if (Vector3.Distance(_player.position, transform.position) > radius)
-        {
-            transform.position = Vector3.Lerp(transform.position, _player.position, positionSmoothness);
-            var targetRotation = Quaternion.LookRotation(_player.position - transform.position);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSmoothness);
-        }
+        transform.position = Vector3.Lerp(transform.position,transform.position + ((_player.position- transform.position).normalized*speed), positionSmoothness);
+        var targetRotation = Quaternion.LookRotation(_player.position - transform.position);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, rotationSmoothness);
         //TODO: WORKS FINE BUT REFACTOR & COMPLETE THE "ELSE" & CHANGE EVERYTHING :)))))))))))
     }
     
