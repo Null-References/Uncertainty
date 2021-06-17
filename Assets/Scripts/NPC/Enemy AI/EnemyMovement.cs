@@ -12,11 +12,11 @@ public class EnemyMovement : MonoBehaviour
     [Range(0, 1)] [SerializeField] private float positionSmoothness = 0.1f;
     [SerializeField] private Animator animator;
     [SerializeField] private float radius = 5f;
-
+    
     private Transform _player;
     private RepeatableTimer _timer;
     private Transform _currentPoint;
-    private int _state = 0;
+    public CurrentState _state { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -32,18 +32,30 @@ public class EnemyMovement : MonoBehaviour
         _timer.Tick(Time.deltaTime);
         switch (_state)
         {
-            case 0:
+            case CurrentState.idle:
                 Idle();
                 break;
-            case 1:
+            case CurrentState.patrol:
                 Patrol();
                 break;
-            case 2:
+            case CurrentState.chasePlayer:
                 ChasePlayer();
                 break;
         }
     }
 
+    public enum CurrentState
+    {
+        idle,
+        patrol,
+        chasePlayer
+    }
+
+    public void SetState(int state)
+    {
+        _state = (CurrentState) state;
+    }
+    
     private void Idle()
     {
         if (_timer.IsReady())
@@ -83,9 +95,7 @@ public class EnemyMovement : MonoBehaviour
         }
         //TODO: WORKS FINE BUT REFACTOR & COMPLETE THE "ELSE" & CHANGE EVERYTHING :)))))))))))
     }
-
-    public void SetState(int state) => this._state = state;
-
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.magenta;
