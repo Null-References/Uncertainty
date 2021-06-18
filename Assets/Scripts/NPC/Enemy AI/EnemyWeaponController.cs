@@ -6,7 +6,6 @@ public class EnemyWeaponController : MonoBehaviour
 {
     [SerializeField] private Transform shotPoint;
     [SerializeField] private WeaponBase weapon;
-    [SerializeField] private Animator animator;
     
     private Transform _player;
 
@@ -19,10 +18,4 @@ public class EnemyWeaponController : MonoBehaviour
         shotPoint.LookAt(_player.position);
         weapon.Shoot();
     }
-
-    public void SetShootingAnimation()
-    {
-        animator.SetBool("Shoot", true);
-    }
-    
 }
