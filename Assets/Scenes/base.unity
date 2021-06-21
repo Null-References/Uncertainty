@@ -7846,6 +7846,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5720214559300918345, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad928fb35a1bc0d4ea1129d9f2783728, type: 3}
 --- !u!1001 &258597861
@@ -8365,6 +8370,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936917069}
     m_Modifications:
+    - target: {fileID: 1206856106622842973, guid: 7534b69219fafbd45b35ddfaed9cbec3,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6907912602846946773, guid: 7534b69219fafbd45b35ddfaed9cbec3,
         type: 3}
       propertyPath: m_RootOrder
@@ -12106,6 +12116,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936917069}
     m_Modifications:
+    - target: {fileID: 1206856106622842973, guid: 7534b69219fafbd45b35ddfaed9cbec3,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6907912602846946773, guid: 7534b69219fafbd45b35ddfaed9cbec3,
         type: 3}
       propertyPath: m_RootOrder
@@ -65065,6 +65080,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936917069}
     m_Modifications:
+    - target: {fileID: 1206856106622842973, guid: 7534b69219fafbd45b35ddfaed9cbec3,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6907912602846946773, guid: 7534b69219fafbd45b35ddfaed9cbec3,
         type: 3}
       propertyPath: m_RootOrder
@@ -65134,17 +65154,17 @@ PrefabInstance:
         type: 3}
       propertyPath: pathPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 474060087}
+      objectReference: {fileID: 858665137}
     - target: {fileID: 6907912602846946794, guid: 7534b69219fafbd45b35ddfaed9cbec3,
         type: 3}
       propertyPath: pathPoints.Array.data[2]
       value: 
-      objectReference: {fileID: 584524345}
+      objectReference: {fileID: 638351194}
     - target: {fileID: 6907912602846946794, guid: 7534b69219fafbd45b35ddfaed9cbec3,
         type: 3}
       propertyPath: pathPoints.Array.data[3]
       value: 
-      objectReference: {fileID: 1867084627}
+      objectReference: {fileID: 287990894}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7534b69219fafbd45b35ddfaed9cbec3, type: 3}
 --- !u!4 &6978776648824570146

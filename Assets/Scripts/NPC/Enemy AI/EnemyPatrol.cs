@@ -42,7 +42,7 @@ public class EnemyPatrol : EnemyMoveState
         if (direction.sqrMagnitude > 1) //TODO: hardcode this is for when position is close to point it dosnt get throgh it and doesnt glitches
         {
             transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.LookRotation(direction,Vector3.up), _rotationSmoothness);
-            transform.Translate(direction.normalized * _speed * Time.deltaTime, Space.World);
+            transform.position+=direction.normalized * _speed * Time.deltaTime;
         }
         else
             transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, _rotationSmoothness);
