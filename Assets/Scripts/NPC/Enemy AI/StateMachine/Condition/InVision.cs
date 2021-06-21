@@ -12,17 +12,20 @@ public class InVision : Condition
 
     private Collider[] _colliderBuffer = new Collider[1];
 
-    public override bool IsMet()
+    public override bool IsMet
     {
-        if(Physics.OverlapSphereNonAlloc(center.position, radius, _colliderBuffer, whatIsTarget) > 0)
+        get
         {
-            var targetDir = _colliderBuffer[0].transform.position - transform.position;
-            if (Vector3.Dot(targetDir.normalized,transform.forward.normalized)>vision)
+            if (Physics.OverlapSphereNonAlloc(center.position, radius, _colliderBuffer, whatIsTarget) > 0)
             {
-                return true;
+                var targetDir = _colliderBuffer[0].transform.position - transform.position;
+                if (Vector3.Dot(targetDir.normalized, transform.forward.normalized) > vision)
+                {
+                    return true;
+                }
             }
+            return false;
         }
-        return false;
     }
 
     private void OnDrawGizmosSelected()

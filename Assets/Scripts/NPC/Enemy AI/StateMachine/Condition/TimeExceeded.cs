@@ -6,18 +6,21 @@ public class TimeExceeded : Condition
 
     private float _lastTime = 0;
 
-    public override bool IsMet()
+    public override bool IsMet
     {
-        if (Time.time - _lastTime > duration)
+        get
         {
-            _lastTime = Time.time;
-            return true;
-        }
+            if (Time.time - _lastTime > duration)
+            {
+                _lastTime = Time.time;
+                return true;
+            }
 
-        return false;
+            return false;
+        }
     }
 
-    public void InitTimer()
+    public void ResetTimer()
     {
         _lastTime = Time.time;
     }

@@ -1,46 +1,51 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyMoveDataContainer))]
+[RequireComponent(typeof(EnemyMoveDataContainer),typeof(ReachDestination))]
 public class EnemyPatrol : EnemyMoveState
 {
-    private float _timeToNextPoint;
     private float _rotationSmoothness;
     private float _speed;
     private List<Transform> _pathPoints;
-
-    private RepeatableTimer _timer;
+    private ReachDestination _destinationCondition;
     private Transform _currentPoint;
 
+    private void OnEnable()
+    {
+        if (_pathPoints == null) return;
+        if (!_destinationCondition) return;
+
+        var pointCount = _pathPoints.Count;
+        var rand = Random.Range(0, pointCount - 1);
+        var selectedPoint = _pathPoints[rand];
+        _currentPoint = selectedPoint;
+        _destinationCondition.SetDestination(_currentPoint.position);
+    }
     private void Start()
     {
         GetDependencies();
 
+        _destinationCondition = GetComponent<ReachDestination>();
         _currentPoint = _pathPoints[0];
-        _timer = new RepeatableTimer(_timeToNextPoint);
+        _destinationCondition.SetDestination(_currentPoint.position);
+
     }
     protected override void Update()
     {
-        _timer.Tick(Time.deltaTime) ;
         Patrol();
     }
 
     private void Patrol()
     {
-        if (_timer.IsReady())
-        {
-            var pointCount = _pathPoints.Count;
-            var rand = Random.Range(0, pointCount - 1);
-            var selectedPoint = _pathPoints[rand];
-            _currentPoint = selectedPoint;
-        }
-
-        transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, _rotationSmoothness);
         var direction = _currentPoint.position - transform.position;
-        if (direction.sqrMagnitude > 4) //TODO: hardcode
+                                                                                                            //vector.up is a little hard coded 
+        if (direction.sqrMagnitude > 1) //TODO: hardcode this is for when position is close to point it dosnt get throgh it and doesnt glitches
         {
+            transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.LookRotation(direction,Vector3.up), _rotationSmoothness);
             transform.Translate(direction.normalized * _speed * Time.deltaTime, Space.World);
         }
+        else
+            transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, _rotationSmoothness);
     }
     protected override void GetDependencies()
     {
@@ -51,7 +56,6 @@ public class EnemyPatrol : EnemyMoveState
             return;
         }
         _speed = data.speed;
-        _timeToNextPoint = data.timeToNextPoint;
         _rotationSmoothness = data.rotationSmoothness;
         _pathPoints = data.pathPoints;
     }

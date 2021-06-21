@@ -2,5 +2,5 @@
 
 public abstract class Condition : MonoBehaviour
 {
-    public abstract bool IsMet();
+    public abstract bool IsMet { get; }
 }

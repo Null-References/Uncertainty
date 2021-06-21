@@ -5,6 +5,7 @@ public class EnemyChase : EnemyMoveState
 {
     private float _speed;
     private float _targetMinDistance;
+    private float _targetMaxDistance;
     private float _rotationSmoothness;
     private Transform _player;
     private void Start()
@@ -20,10 +21,15 @@ public class EnemyChase : EnemyMoveState
     private void ChasePlayer()
     {
         var direction = _player.position - transform.position;
-        if (direction.sqrMagnitude < _targetMinDistance)//note: this is squered not actual distance
-            transform.Translate(-direction.normalized * _speed * Time.deltaTime);
-        else
-            transform.Translate(direction.normalized * _speed * Time.deltaTime);
+            //note: this is squered not actual distance
+        if (direction.sqrMagnitude > _targetMaxDistance) 
+        {
+            transform.position +=direction.normalized * _speed * Time.deltaTime;
+        }
+        else if (direction.sqrMagnitude < _targetMinDistance)
+        {
+            transform.position-= direction.normalized * _speed * Time.deltaTime;
+        }
         
         var targetRotation = Quaternion.LookRotation(_player.position - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, _rotationSmoothness);
@@ -38,5 +44,7 @@ public class EnemyChase : EnemyMoveState
         }
         _speed = data.speed;
         _rotationSmoothness = data.rotationSmoothness;
+        _targetMinDistance = data.targetMinDistance;
+        _targetMaxDistance = data.targetMaxDistance;
     }
 }

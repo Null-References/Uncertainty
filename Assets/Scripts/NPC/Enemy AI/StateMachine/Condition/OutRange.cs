@@ -8,7 +8,7 @@ public class OutRange : Condition
 
     private Collider[] _colliderBuffer = new Collider[1];
 
-    public override bool IsMet() =>
+    public override bool IsMet =>
         Physics.OverlapSphereNonAlloc(center.position, radius, _colliderBuffer, whatIsTarget) <= 0;
 
     private void OnDrawGizmosSelected()
