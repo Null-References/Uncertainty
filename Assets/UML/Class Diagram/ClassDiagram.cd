@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="@Controls" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="16" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AFAAABABgCAAABYkAACQCJAAAIAAAGAUAAEgAAAQAAA=</HashCode>
+      <FileName>Assets\Input\Controls.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ShipControler">
+    <Position X="4.25" Y="11" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAQAAgAAEqAgAABAAQQIIAABEAAAAAAAACAABEAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Controler\ShipControler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_inputHandler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="8" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAQAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EnemyMovement">
+    <Position X="24.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAJABACCIgBAAAAAAACAAABCAAAQAAAAIAQIAIAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyMovement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_timer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="EnemyWeaponController">
+    <Position X="11.5" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BARAAAAAACAAAAAAAAAQCAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyWeaponController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="weapon" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Condition">
+    <Position X="18" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\Condition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConditionExtension" Collapsed="true">
+    <Position X="15.25" Y="13.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\Condition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InRange">
+    <Position X="15.75" Y="14.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACAIAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\InRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OutRange">
+    <Position X="19" Y="14.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAACAgAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\OutRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="State" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="9" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAIIAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\State.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="transitions" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.175" Collapsed="true" />
+  </Class>
+  <Class Name="StateBehavior">
+    <Position X="20.5" Y="5.75" Width="2.5" />
+    <AssociationLine Name="StateMachine" Type="StateMachine" FixedToPoint="true">
+      <Path>
+        <Point X="22.625" Y="5.75" />
+        <Point X="22.625" Y="4.988" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAACAgBggAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\StateBehavior.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="startState" />
+      <Field Name="_stateMachine" />
+      <Field Name="_timer" />
+      <Property Name="StateMachine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StateMachine">
+    <Position X="20" Y="3.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\StateMachine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CurrentState" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StateTransition">
+    <Position X="22.5" Y="12.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\StateTransition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="nextState" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="conditions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ShipInputValueHandler">
+    <Position X="7.75" Y="10.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAACQCAAEAAAAQAAAAAAAAAAAAEAKgAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\ShipInputValueHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_controls" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ShipShootingControler">
+    <Position X="6.75" Y="6.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>ACQAEAJAACAAAABAAAAAAAABCAAAAgAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\ShipShootingControler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="weapon" />
+      <Field Name="_inputHandler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CustomTimer">
+    <Position X="16.75" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACCAAAAAAAAAAAAAABAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Timer\CustomTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NonRepeatableTimer">
+    <Position X="15" Y="10" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Timer\NonRepeatableTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RepeatableTimer">
+    <Position X="18.5" Y="10.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAQBA=</HashCode>
+      <FileName>Assets\Scripts\Timer\RepeatableTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoolBase&lt;T&gt;">
+    <Position X="11.75" Y="12.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAABAAAAAAAIgABAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Utils\PoolBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Instance" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Blaster">
+    <Position X="12" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Blaster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleProjectile">
+    <Position X="15.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgQAAAAAAAEAAAAAAAAQAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\SimpleProjectile.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_timer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SimpleProjectilePool">
+    <Position X="12.25" Y="16" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\SimpleProjectilePool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponBase">
+    <Position X="11.75" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAIghAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\WeaponBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_timer" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="IState">
+    <Position X="19.75" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\IState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

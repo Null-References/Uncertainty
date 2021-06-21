@@ -1,1 +1,3 @@
-﻿public class SimpleProjectilePool : PoolBase<SimpleProjectile>{}
+﻿public class SimpleProjectilePool : PoolBase<SimpleProjectile>
+{
+}

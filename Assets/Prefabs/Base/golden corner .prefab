@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1388005286842760336}
   - component: {fileID: 4838907754757622474}
   - component: {fileID: 3655988749951499792}
+  - component: {fileID: -4405407807186327287}
   m_Layer: 0
   m_Name: 'golden corner '
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &-4405407807186327287
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3165495216620838882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3378578088244294639, guid: 675ba1ba2a163d348a26cb954b0b7e16, type: 3}

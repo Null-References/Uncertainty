@@ -2,20 +2,18 @@
 
 [RequireComponent(typeof(ShipInputValueHandler))]
 public class ShipControler : MonoBehaviour
-{   
+{
     [SerializeField] Transform shipModel;
-    
-    [Header("Physic")]
-    [SerializeField] private float moveSpeed = 1f;
+
+    [Header("Physic")] [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private float torqueSpeed = 1f;
     [SerializeField] private float aimingTorqueSpeed = 1f;
     [SerializeField] private float rollSpeed = 1f;
 
-    [Header("Visual")]
-    [Range(0, 50)]
-    [SerializeField] private float rollFanciness = 1f;
-    [Range(0, 50)]
-    [SerializeField] private float pitchFanciness = 1f;
+    [Header("Visual")] [Range(0, 50)] [SerializeField]
+    private float rollFanciness = 1f;
+
+    [Range(0, 50)] [SerializeField] private float pitchFanciness = 1f;
     [SerializeField] private float fancinessSpeed = 1f;
 
 
@@ -29,11 +27,13 @@ public class ShipControler : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
         _inputHandler = GetComponent<ShipInputValueHandler>();
     }
+
     private void FixedUpdate()
     {
         Move();
         Rotate();
     }
+
     private void Update()
     {
         _mouseValue = _inputHandler.GetMouseValue();
@@ -53,14 +53,15 @@ public class ShipControler : MonoBehaviour
         var roll = _inputHandler.GetRollValue * rollSpeed;
         _rb.AddRelativeTorque(-torque.y, torque.x, -roll, ForceMode.VelocityChange);
     }
+
     private void VisualRotate()
     {
         //fancy part
         var targetRotation = Quaternion.Euler(_mouseValue.y * pitchFanciness, 180, _mouseValue.x * rollFanciness);
         shipModel.localRotation = Quaternion.Lerp(
-                                                            shipModel.localRotation,
-                                                            targetRotation,
-                                                            Time.deltaTime * fancinessSpeed
-                                                            );
+            shipModel.localRotation,
+            targetRotation,
+            Time.deltaTime * fancinessSpeed
+        );
     }
 }
