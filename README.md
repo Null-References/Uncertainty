@@ -1,3 +1,4 @@
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -7,6 +8,7 @@
 [![closed pull requests][pull-closed-shield]][pull-closed-url]
 [![milestones][milestones-shield]][milestones-url]
 [![MIT License][license-shield]][license-url]
+![Code Quality][code-quality-shield]
 
 
 <!-- PROJECT LOGO -->
@@ -96,3 +98,4 @@ Mohammad Mahdi Afkhami | `97149008` | Programmer , Art Designer | [Link](https:/
 [milestones-url]: https://github.com/Null-References/Uncertainty/milestones
 [license-shield]: https://img.shields.io/github/license/Null-References/Uncertainty?style=for-the-badge
 [license-url]: https://github.com/Null-References/Uncertainty/blob/main/LICENSE
+[code-quality-shield]: https://img.shields.io/codefactor/grade/github/Null-References/Uncertainty?style=for-the-badge
