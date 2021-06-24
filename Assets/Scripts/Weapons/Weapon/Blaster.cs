@@ -7,7 +7,7 @@ class Blaster : WeaponBase
         _timer.Tick(Time.deltaTime);
         if (_timer.IsReady())
         {
-            var projectile = SimpleProjectilePool.Instance.Get();
+            var projectile = NormalBulletPool.Instance.Get();
             projectile.transform.position = shotPoint.position;
             projectile.transform.rotation = shotPoint.rotation;
             projectile.gameObject.SetActive(true);
