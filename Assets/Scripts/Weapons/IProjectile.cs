@@ -1,7 +1,7 @@
-﻿namespace Weapons
+﻿using UnityEngine;
+
+public interface IProjectile
 {
-    public interface IProjectile
-    {
-        
-    }
+    void DealDamage(Collider other);
+    
 }

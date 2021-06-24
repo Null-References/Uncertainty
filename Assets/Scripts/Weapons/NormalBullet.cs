@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class SimpleProjectile : MonoBehaviour
+public class NormalBullet : MonoBehaviour, IProjectile
 {
     [SerializeField] private float speed = 1f;
     [SerializeField] private float lifeTime = 2f;
+    [SerializeField] private LayerMask whatIsCollidable;
 
     private NonRepeatableTimer _timer;
 
@@ -16,6 +18,11 @@ public class SimpleProjectile : MonoBehaviour
         _timer.OnTimerEnded += DeSpawn;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        DealDamage(other);
+    }
+
     private void Update()
     {
         _timer.Tick(Time.deltaTime);
@@ -23,4 +30,8 @@ public class SimpleProjectile : MonoBehaviour
     }
 
     private void DeSpawn() => SimpleProjectilePool.Instance.ReturnToPool(this);
+    public void DealDamage(Collider other)
+    {
+        
+    }
 }
