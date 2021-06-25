@@ -7,6 +7,7 @@ public class NormalBullet : MonoBehaviour, IProjectile
     [SerializeField] private float lifeTime = 2f;
     [SerializeField] private LayerMask whatIsCollidable;
 
+    private int _owner;
     private NonRepeatableTimer _timer;
     private DamageDealer _dealer;
 
@@ -22,6 +23,10 @@ public class NormalBullet : MonoBehaviour, IProjectile
 
     public void OnTriggerEnter(Collider other)
     {
+        //Debug.Log($"{other.name} : {other.GetInstanceID()}");
+        if (_owner == other.GetInstanceID())
+            return;
+
         if ((whatIsCollidable.value & (1 << other.gameObject.layer)) <= 0)
             return;
 
@@ -31,7 +36,6 @@ public class NormalBullet : MonoBehaviour, IProjectile
 
         foreach (var taker in target)
         {
-            Debug.Log("hapens");
             taker.TakeDamage(_dealer.DamageTypes);
         }
 
@@ -43,6 +47,9 @@ public class NormalBullet : MonoBehaviour, IProjectile
         _timer.Tick(Time.deltaTime);
         transform.Translate(Vector3.forward * (Time.deltaTime * speed));
     }
-
+    public void SetOwner(int ownerID)
+    {
+        _owner = ownerID;
+    }
     private void DeSpawn() => NormalBulletPool.Instance.ReturnToPool(this);
 }

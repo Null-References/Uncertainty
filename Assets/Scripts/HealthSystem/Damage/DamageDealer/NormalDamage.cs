@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(DamageDealer))]
-public class DealNormalDamage : MonoBehaviour, IDealDamage
+public class NormalDamage : MonoBehaviour, IDamage
 {
     public float DamageAmount = 5f;
     public float Damage() => DamageAmount;

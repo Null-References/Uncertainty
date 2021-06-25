@@ -3,5 +3,5 @@ using System.Collections.Generic;
 
 public interface ITakeDamage
 {
-    void TakeDamage(Dictionary<Type,IDealDamage> damageTypes);
+    void TakeDamage(Dictionary<Type,IDamage> damageTypes);
 }

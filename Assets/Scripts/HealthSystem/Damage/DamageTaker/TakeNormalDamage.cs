@@ -5,9 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public class TakeNormalDamage : MonoBehaviour, ITakeDamage
 {
-    public void TakeDamage(Dictionary<Type, IDealDamage> damageTypes)
+    private Health _health;
+    private void Start()
     {
-        var damageType = damageTypes[typeof(DealNormalDamage)] as DealNormalDamage;
-        Debug.Log($"{gameObject.name} took damage from {damageType.name} amount : {damageType.Damage()}");
+        _health = GetComponent<Health>();
+    }
+    public void TakeDamage(Dictionary<Type, IDamage> damageTypes)
+    {
+        var damageType = damageTypes[typeof(NormalDamage)] as NormalDamage;
+        _health.ReduceHealth(damageType.Damage());
+        //Debug.Log($"{gameObject.name} took damage from {damageType.name} amount : {damageType.Damage()}");
     }
 }
