@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="@Controls" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="8.75" Y="16" Width="1.5" />
+    <Position X="7.5" Y="9" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -9,10 +9,18 @@
       <HashCode>AFAAABABgCAAABYkAACQCJAAAIAAAGAUAAEgAAAQAAA=</HashCode>
       <FileName>Assets\Input\Controls.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="ShipControler">
-    <Position X="4.25" Y="11" Width="2.25" />
+    <Position X="4" Y="1.25" Width="2.75" />
+    <AssociationLine Name="_inputHandler" Type="ShipInputValueHandler" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.125" Y="6.011" />
+        <Point X="5.125" Y="6.26" />
+        <Point X="4.625" Y="6.26" />
+        <Point X="4.625" Y="6.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>IAQAAgAAEqAgAABAAQQIIAABEAAAAAAAACAABEAAAAA=</HashCode>
       <FileName>Assets\Scripts\Controler\ShipControler.cs</FileName>
@@ -22,7 +30,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="GameManager">
-    <Position X="8" Y="3.75" Width="2.5" />
+    <Position X="12.5" Y="11.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAQAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\GameManager.cs</FileName>
@@ -31,56 +39,160 @@
       <Field Name="Instance" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="EnemyMovement">
-    <Position X="24.5" Y="3.75" Width="2.5" />
+  <Class Name="DamageDealer">
+    <Position X="26.5" Y="14.25" Width="3.75" />
+    <AssociationLine Name="DamageTypes" Type="IDamage" FixedFromPoint="true">
+      <Path>
+        <Point X="28.938" Y="15.483" />
+        <Point X="28.938" Y="16.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>BAQAJABACCIgBAAAAAAACAAABCAAAQAAAAIAQIAIAAA=</HashCode>
-      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyMovement.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthSystem\Damage\DamageDealer\DamageDealer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DamageTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NormalDamage" BaseTypeListCollapsed="true">
+    <Position X="30.5" Y="16" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthSystem\Damage\DamageDealer\NormalDamage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TakeNormalDamage" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="13" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthSystem\Damage\DamageTaker\TakeNormalDamage.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_timer" />
+      <Field Name="_health" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.365" />
+  </Class>
+  <Class Name="Health">
+    <Position X="8.75" Y="9.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEIACAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthSystem\Health\Health.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyAnimationController">
+    <Position X="9.75" Y="15.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyAnimationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyChase">
+    <Position X="16.75" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgCAAgAAAAAAACAAAACAAAAAABgAAAAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyChase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyIdle">
+    <Position X="19.75" Y="15" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQAAABAACAghAAAAAAAAAAAAAAAAQAAAAAAQAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyIdle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMoveDataContainer">
+    <Position X="4.5" Y="14.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAIAAIAAAAAAgAAEAAAAAQAAAAIAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyMoveDataContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMoveState">
+    <Position X="16.5" Y="12.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyMoveState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyPatrol">
+    <Position X="13" Y="15" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAACAAhAAAAAAAAAAAAAAAAQAABAAAQAAACIA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\EnemyPatrol.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_destinationCondition" />
     </ShowAsAssociation>
   </Class>
   <Class Name="EnemyWeaponController">
-    <Position X="11.5" Y="2.75" Width="2.25" />
+    <Position X="10" Y="1.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>BARAAAAAACAAAAAAAAAQCAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AARAAAAAACAAAAAAAAAACAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\EnemyWeaponController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="weapon" />
     </ShowAsAssociation>
   </Class>
+  <Class Name="LookAt">
+    <Position X="7.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAACCAAAAAAIAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\LookAt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Condition">
-    <Position X="18" Y="13" Width="1.5" />
+    <Position X="19.5" Y="0.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\Condition.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ConditionExtension" Collapsed="true">
-    <Position X="15.25" Y="13.25" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
-      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\Condition.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="InRange">
-    <Position X="15.75" Y="14.75" Width="2.5" />
+    <Position X="19.5" Y="2.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAACAIAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAA=</HashCode>
+      <HashCode>AAgAAAAACgIAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\InRange.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OutRange">
-    <Position X="19" Y="14.75" Width="2.5" />
+  <Class Name="InVision">
+    <Position X="22.75" Y="2.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAIAAAAAAAAAAAAAAAAAAAAAACAgAAEAAAA=</HashCode>
+      <HashCode>AAgAAAAACgIAAAAAAAAAAAAAAAAAAAAAACCgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\InVision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OutRange">
+    <Position X="26" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAACgIAAAAAAAAAAAAAAAAAAAAAACAgAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\OutRange.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ReachDestination">
+    <Position X="13.25" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAQ=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\ReachDestination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TimeExceeded">
+    <Position X="16.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAABAAAAAABAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\Condition\TimeExceeded.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="State" BaseTypeListCollapsed="true">
-    <Position X="22.75" Y="9" Width="2" />
+    <Position X="30.75" Y="6.5" Width="2.75" />
+    <AssociationLine Name="transitions" Type="StateTransition" FixedToPoint="true">
+      <Path>
+        <Point X="30.875" Y="6.5" />
+        <Point X="30.875" Y="5.046" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAIIAAAAAAAAg=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\State.cs</FileName>
@@ -88,14 +200,14 @@
     <ShowAsCollectionAssociation>
       <Field Name="transitions" />
     </ShowAsCollectionAssociation>
-    <Lollipop Position="0.175" Collapsed="true" />
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="StateBehavior">
-    <Position X="20.5" Y="5.75" Width="2.5" />
-    <AssociationLine Name="StateMachine" Type="StateMachine" FixedToPoint="true">
+    <Position X="26" Y="7" Width="3.75" />
+    <AssociationLine Name="StateMachine" Type="StateMachine" FixedFromPoint="true">
       <Path>
-        <Point X="22.625" Y="5.75" />
-        <Point X="22.625" Y="4.988" />
+        <Point X="28.188" Y="9.069" />
+        <Point X="28.188" Y="9.75" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -110,7 +222,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="StateMachine">
-    <Position X="20" Y="3.5" Width="3.5" />
+    <Position X="28" Y="9.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\StateMachine.cs</FileName>
@@ -120,7 +232,13 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="StateTransition">
-    <Position X="22.5" Y="12.75" Width="2.75" />
+    <Position X="29.5" Y="3.75" Width="3.25" />
+    <AssociationLine Name="nextState" Type="State" FixedFromPoint="true">
+      <Path>
+        <Point X="32.676" Y="5.046" />
+        <Point X="32.676" Y="6.5" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEACAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\StateTransition.cs</FileName>
@@ -133,7 +251,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ShipInputValueHandler">
-    <Position X="7.75" Y="10.5" Width="2.25" />
+    <Position X="4" Y="6.5" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AQAAAACQCAAEAAAAQAAAAAAAAAAAAEAKgAAAAAAACEA=</HashCode>
       <FileName>Assets\Scripts\ShipInputValueHandler.cs</FileName>
@@ -142,11 +260,11 @@
       <Field Name="_controls" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="ShipShootingControler">
-    <Position X="6.75" Y="6.25" Width="4" />
+  <Class Name="ShipShootingController">
+    <Position X="7.75" Y="5" Width="4" />
     <TypeIdentifier>
-      <HashCode>ACQAEAJAACAAAABAAAAAAAABCAAAAgAAAAAAAAAAAAE=</HashCode>
-      <FileName>Assets\Scripts\ShipShootingControler.cs</FileName>
+      <HashCode>ACQAAAJAACAAAIBAAAAAAAABCAAAAAABAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\ShipShootingController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="weapon" />
@@ -154,28 +272,45 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="CustomTimer">
-    <Position X="16.75" Y="6.75" Width="2.25" />
+    <Position X="22.75" Y="6.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACCAAAAAAAAAAAAAABAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Assets\Scripts\Timer\CustomTimer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NonRepeatableTimer">
-    <Position X="15" Y="10" Width="2.75" />
+    <Position X="21" Y="10" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Assets\Scripts\Timer\NonRepeatableTimer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RepeatableTimer">
-    <Position X="18.5" Y="10.5" Width="2.5" />
+    <Position X="24.5" Y="10" Width="2.5" />
+    <InheritanceLine Type="CustomTimer" FixedToPoint="true">
+      <Path>
+        <Point X="23.875" Y="9.141" />
+        <Point X="23.875" Y="9.625" />
+        <Point X="25.229" Y="9.625" Type="JumpStart" />
+        <Point X="25.396" Y="9.625" Type="JumpEnd" />
+        <Point X="25.625" Y="9.625" />
+        <Point X="25.625" Y="10" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAQBA=</HashCode>
       <FileName>Assets\Scripts\Timer\RepeatableTimer.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="ConditionExtension">
+    <Position X="15.25" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\Utils\ConditionExtension.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="PoolBase&lt;T&gt;">
-    <Position X="11.75" Y="12.75" Width="2.75" />
+    <Position X="16.75" Y="6.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAABAAAAAAAIgABAAAAAAQAAAAAAAAEA=</HashCode>
       <FileName>Assets\Scripts\Utils\PoolBase.cs</FileName>
@@ -184,45 +319,68 @@
       <Property Name="Instance" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Blaster">
-    <Position X="12" Y="9.75" Width="1.5" />
+  <Class Name="NormalBullet" BaseTypeListCollapsed="true">
+    <Position X="23" Y="13.25" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Weapons\Blaster.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SimpleProjectile">
-    <Position X="15.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAgQAAAAAAAEAAAAAAAAQAAAAAAAAAACEA=</HashCode>
-      <FileName>Assets\Scripts\Weapons\SimpleProjectile.cs</FileName>
+      <HashCode>AAQIgAAIACAgQAAAAAAAEAAAQAAAAQAAQAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Projectile\NormalBullet.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_timer" />
+      <Field Name="_dealer" />
     </ShowAsAssociation>
+    <Lollipop Position="0.911" />
   </Class>
-  <Class Name="SimpleProjectilePool">
-    <Position X="12.25" Y="16" Width="1.75" />
+  <Class Name="NormalBulletPool">
+    <Position X="17.25" Y="10" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Weapons\SimpleProjectilePool.cs</FileName>
+      <FileName>Assets\Scripts\Weapons\Projectile\NormalBulletPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Blaster">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon\Blaster.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WeaponBase">
-    <Position X="11.75" Y="6.75" Width="2" />
+    <Position X="12.75" Y="5.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAIghAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
-      <FileName>Assets\Scripts\Weapons\WeaponBase.cs</FileName>
+      <FileName>Assets\Scripts\Weapons\Weapon\WeaponBase.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="_timer" />
     </ShowAsAssociation>
   </Class>
+  <Interface Name="IDamage">
+    <Position X="27.5" Y="16.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthSystem\Damage\DamageDealer\IDamage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ITakeDamage">
+    <Position X="4.25" Y="11" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HealthSystem\Damage\DamageTaker\ITakeDamage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Interface Name="IState">
-    <Position X="19.75" Y="1.5" Width="2" />
+    <Position X="31.75" Y="9.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\NPC\Enemy AI\StateMachine\IState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IProjectile" Collapsed="true">
+    <Position X="26.75" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Projectile\IProjectile.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
