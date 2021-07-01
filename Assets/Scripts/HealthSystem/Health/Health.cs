@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private UnityEvent OnDeath;
 
-    public float _currentHealth;
+    private float _currentHealth;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class Health : MonoBehaviour
         if (_currentHealth<=0)
         {
             Debug.Log($"{gameObject.name} Died");
+            OnDeath.Invoke();
         }
     }
 }

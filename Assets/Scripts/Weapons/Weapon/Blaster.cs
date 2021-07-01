@@ -17,10 +17,15 @@ class Blaster : WeaponBase
         if (_timer.IsReady())
         {
             var projectile = NormalBulletPool.Instance.Get();
-            projectile.SetOwner(_ownerID);
-            projectile.transform.position = shotPoint.position;
-            projectile.transform.rotation = shotPoint.rotation;
-            projectile.gameObject.SetActive(true);
+            SetProjectileSettings(projectile);
         }
+    }
+
+    private void SetProjectileSettings(NormalBullet projectile)
+    {
+        projectile.SetOwner(_ownerID);
+        projectile.transform.position = shotPoint.position;
+        projectile.transform.rotation = shotPoint.rotation;
+        projectile.gameObject.SetActive(true);
     }
 }
