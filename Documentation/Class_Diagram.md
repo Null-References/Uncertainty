@@ -8,11 +8,11 @@
 <p h2 align="center">
 <br />
     
-* *Class Diagram might get updated later on*
+* *To see it perfectly you'll need to open the picture and zoom on it*
 
 
     
 ![Class diagram](Class_Diagram_Pictures/ClassDiagram.png)
 
-*To see it perfectly you'll need to open the picture*
+
 
