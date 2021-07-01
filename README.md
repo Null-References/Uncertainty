@@ -2,12 +2,12 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
+[![milestones][milestones-shield]][milestones-url]
+[![MIT License][license-shield]][license-url]
 [![Issues][issues-shield]][issues-url]
 [![Closed Issues][issues-closed-shield]][issues-closed-url]
 [![pull requests][pull-req-shield]][pull-req-url]
 [![closed pull requests][pull-closed-shield]][pull-closed-url]
-[![milestones][milestones-shield]][milestones-url]
-[![MIT License][license-shield]][license-url]
 ![Code Quality][code-quality-shield]
 
 
@@ -23,12 +23,53 @@
     We are using this project as our "Software Engineering Lab" course project.
     <br />
     (Spring 2021)
+  <br />
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#technical-specifications">Technical Specifications</a></li>
+    <li>
+      <a href="#project-requirements">Project Requirements</a>
+      <ul>
+        <li><a href="#functional-requirements">Functional Requirements</a></li>
+        <li><a href="#non-functional-requirements">Non-Functional Requirements</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#project-documentation">Project Documentation</a>
+      <ul>
+        <li><a href="#needs-assessment-and-project-scenario">Needs assessment and project scenario</a></li>
+        <li><a href="#project-analysis-and-design">Project Analysis and Design</a></li>
+        <li><a href="#project-management">Project Management</a></li>
+      </ul>
+    </li>
+    <li><a href="#project-members">Project Members</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
 
-## Introduction:  
+## About The Project:  
 Uncertainty is a 3D game developed in Unity 2019.4.16f1,  
 we plan to develop a space shooter action-packed adventure game based on boss fight mechanics.  
 
+### Built With
+
+
+* [Unity](https://unity.com)
+* [Blender](https://www.blender.org)
+* [Visual Studio](https://visualstudio.microsoft.com)
+* [Rider](https://www.jetbrains.com/rider)
+* [Krita](https://krita.org/en)
+* [C#](https://docs.microsoft.com/en-us/dotnet/csharp)
 
 ## Technical Specifications:  
 - Platform: Windows, Mac OS  
@@ -74,6 +115,11 @@ First and Last Name | Student Number | Responsibility | Username
 Parsa KamaliPour | `97149081` | Project Manager , Programmer | [Link](https://github.com/benymaxparsa)
 Mohammad Mahdi Afkhami | `97149008` | Programmer , Art Designer | [Link](https://github.com/mohmehdi)
 
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
