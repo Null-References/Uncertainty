@@ -99,7 +99,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 ### Project Analysis and Design:
 - Usecase Diagram: [Link](Documentation/Usecase_Diagram.md)
 - Activity Diagram: [Link](Documentation/Activity_Diagram.md)
-- Class Diagram: [Link (In Progress)](Documentation/Class_Diagram.md)
+- Class Diagram: [Link](Documentation/Class_Diagram.md)
 - Sequence Diagram: [Link (ToDo)]()  
 
 ### Project Management:  
