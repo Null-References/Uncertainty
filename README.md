@@ -79,12 +79,12 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 
 
 ## Project Requirements:  
-#### Functional Requirements:  
+### Functional Requirements:  
 - The player can move the spaceship
 - The player can fight enemies likewise, vice versa..
 - There is a bossfight in the level
 
-#### Non-Functional Requirements:  
+### Non-Functional Requirements:  
 - Performance - In order to ensure smooth lagging-free performance on all computers, the game must be optimized
 - Scalability - Software Architecture must be designed in such a way that the game can be expanded later on
 - Reliability - The game should not crash or present any issues that cause it to malfunction
@@ -92,23 +92,23 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 
 ## Project Documentation:  
 
-#### Needs assessment and project scenario:  
+### Needs assessment and project scenario:  
 - Project Scenario: [Link](Documentation/SCENARIO.md)
 - Project Needs assessment: [Link](Documentation/NEEDS_ASSESSMENT.md)  
 - Project Requirements: [Link](Documentation/Requirements.md)
-#### Project Analysis and Design:
+### Project Analysis and Design:
 - Usecase Diagram: [Link](Documentation/Usecase_Diagram.md)
 - Activity Diagram: [Link](Documentation/Activity_Diagram.md)
 - Class Diagram: [Link (In Progress)](Documentation/Class_Diagram.md)
 - Sequence Diagram: [Link (ToDo)]()  
 
-#### Project Management:  
+### Project Management:  
 - Project Phasing documentation: [Link](Documentation/Phasing.md) 
 - Project Scheduling documentation: [Link](Documentation/Project_Scheduling.md) 
 
 
 ## Project Members:  
-#### Project Code: G14
+### Project Code: G14
 
 First and Last Name | Student Number | Responsibility | Username
 --- | --- | --- | ---
