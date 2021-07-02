@@ -76,7 +76,8 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Programming Languages: C#
 - Database: Data are handled in Unity
 
-
+## Screenshots:  
+![Ship & Boss 1](Documentation\GamePlay_Screenshots\ship_and_boss_1.jpg)
 
 ## Project Requirements:  
 ### Functional Requirements:  
