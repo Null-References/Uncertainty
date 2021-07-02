@@ -16,6 +16,10 @@
     <li><a href="#enemyanimationcontroller">EnemyAnimationController</a></li>
     <li><a href="#enemychase">EnemyChase</a></li>
     <li><a href="#enemyidle">EnemyIdle</a></li>
+    <li><a href="#enemypatrol">EnemyPatrol</a></li>
+    <li><a href="#enemyweaponcontroller">EnemyWeaponController</a></li>
+    <li><a href="#gamemanager">GameManager</a></li>
+    <li><a href="#health">Health</a></li>
   </ol>
 </details>
 
@@ -74,4 +78,34 @@
 * Update function
 
 ![Update](Sequence_Diagram_Pictures/EnemyIdle/EnemyIdle_Update.png)
+
+## EnemyPatrol:  
+* Start function
+
+![Start](Sequence_Diagram_Pictures/EnemyPatrol/EnemyPatrol_Start.png)
+
+* Update function
+
+![Update](Sequence_Diagram_Pictures/EnemyPatrol/EnemyPatrol_Update.png)
+
+* OnEnable function
+
+![OnEnable](Sequence_Diagram_Pictures/EnemyPatrol/EnemyPatrol_OnEnable.png)
+
+
+## EnemyWeaponController:  
+* Update function
+
+![Update](Sequence_Diagram_Pictures/EnemyWeaponController/EnemyWeaponController_Update.png)
+
+## GameManager:  
+* Awake function
+
+![Awake](Sequence_Diagram_Pictures/GameManager/GameManager_Awake.png)
+
+## Health:  
+* ReduceHealth function
+
+![ReduceHealth](Sequence_Diagram_Pictures/Health/Health_ReduceHealth.png)
+
 
