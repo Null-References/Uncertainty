@@ -14,6 +14,8 @@
     <li><a href="#blaster">Blaster</a></li>
     <li><a href="#damagedealer">DamageDealer</a></li>
     <li><a href="#enemyanimationcontroller">EnemyAnimationController</a></li>
+    <li><a href="#enemychase">EnemyChase</a></li>
+    <li><a href="#enemyidle">EnemyIdle</a></li>
   </ol>
 </details>
 
@@ -39,11 +41,37 @@
 
 
 ## EnemyAnimationController:  
-* SetIdle
+* SetIdle function
 
 ![SetIdle](Sequence_Diagram_Pictures/EnemyAnimationController/EnemyAnimationController_SetIdle.png)
 
-* SetShooting
+* SetShooting function
 
 ![SetShooting](Sequence_Diagram_Pictures/EnemyAnimationController/EnemyAnimationController_SetShooting.png)
+
+## EnemyChase:  
+* Start function
+
+![Start](Sequence_Diagram_Pictures/EnemyChase/EnemyChase_Start.png)
+
+* GetDependencies function
+
+![GetDependencies](Sequence_Diagram_Pictures/EnemyChase/EnemyChase_GetDependencies.png)
+
+* ChasePlayer function
+
+![ChasePlayer](Sequence_Diagram_Pictures/EnemyChase/EnemyChase_ChasePlayer.png)
+
+* Update function
+
+![Update](Sequence_Diagram_Pictures/EnemyChase/EnemyChase_Update.png)
+
+## EnemyIdle:  
+* Start function
+
+![Start](Sequence_Diagram_Pictures/EnemyIdle/EnemyIdle_Start.png)
+
+* Update function
+
+![Update](Sequence_Diagram_Pictures/EnemyIdle/EnemyIdle_Update.png)
 
