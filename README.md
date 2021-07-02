@@ -36,6 +36,7 @@
       </ul>
     </li>
     <li><a href="#technical-specifications">Technical Specifications</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
     <li>
       <a href="#project-requirements">Project Requirements</a>
       <ul>
