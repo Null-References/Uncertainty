@@ -102,7 +102,7 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Usecase Diagram: [Link](Documentation/Usecase_Diagram.md)
 - Activity Diagram: [Link](Documentation/Activity_Diagram.md)
 - Class Diagram: [Link](Documentation/Class_Diagram.md)
-- Sequence Diagram: [Link (ToDo)]()  
+- Sequence Diagram: [Link](Documentation/Sequence_Diagram.md)  
 
 ### Project Management:  
 - Project Phasing documentation: [Link](Documentation/Phasing.md) 
