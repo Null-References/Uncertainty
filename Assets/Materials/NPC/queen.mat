@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: queen
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 128c5f1edaefa4c4fb3f9f7a4615edb2, type: 3}
   m_ShaderKeywords: _SEGMENTED_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 7850215712ad4184abdf27966c48f00d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -56,40 +56,40 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AmbientCol: 0.6
+    - _AmbientCol: 1
     - _BumpScale: 1
     - _Clipped: 0
     - _ColBright: 0
     - _ColIntense: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.693
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.527
     - _GlossyReflections: 1
-    - _Lumin: 0.02
+    - _Lumin: 0.28
     - _MaxLight: 1
-    - _Metallic: 0
-    - _MinLight: 0.189
+    - _Metallic: 0.405
+    - _MinLight: 0.224
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Offset: -0.05
+    - _Offset: 0.12
     - _OtlWidth: 5
     - _Parallax: 0.02
     - _Segmented: 1
-    - _ShnIntense: 0.181
+    - _ShnIntense: 0.103
     - _ShnOverlap: 0
-    - _ShnRange: 0.179
-    - _ShnSmooth: 1
+    - _ShnRange: 0.172
+    - _ShnSmooth: 0.804
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Steps: 2
-    - _StpSmooth: 0.087
+    - _Steps: 2.3
+    - _StpSmooth: 0.204
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5330188, g: 0.66103834, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.37254906, b: 0.5733451, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OtlColor: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
-    - _ShnColor: {r: 0.8039216, g: 0.22348154, b: 0.011764695, a: 1}
+    - _OtlColor: {r: 0.15036489, g: 0.24351865, b: 0.2924528, a: 1}
+    - _ShnColor: {r: 1.6937672, g: 0.8378742, b: 1.081128, a: 1}

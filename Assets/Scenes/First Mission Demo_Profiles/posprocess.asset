@@ -17,14 +17,14 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   spectralLut:
-    overrideState: 0
+    overrideState: 1
     value: {fileID: 0}
     defaultState: 1
   intensity:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 0.15
   fastMode:
-    overrideState: 0
+    overrideState: 1
     value: 0
 --- !u!114 &-1398469548187737214
 MonoBehaviour:

@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class LookAt : MonoBehaviour
 {
-    [Range(0,180)]
-    [SerializeField] private float radius = 30f;
+    [Range(0,-90)]
+    [SerializeField] private float minX = 0f;
+    [Range(0, 90)]
+    [SerializeField] private float maxX = 30f;
+    [Range(0, -90)]
+    [SerializeField] private float minY = 0f;
+    [Range(0, 90)]
+    [SerializeField] private float maxY = 30f;
+
     [SerializeField] private Transform target;
-    [SerializeField] private float smoothness=0.1f;
+    [SerializeField] private float smoothness = 0.1f;
 
     private Vector3 _defaultForward;
-
+    private Quaternion _defaultRotation;
     private void Start()
     {
-        _defaultForward = transform.forward;
+        _defaultForward = transform.rotation.eulerAngles;
+        _defaultRotation = transform.rotation;
         if (!target)
         {
             Debug.Log($"Set target for Look at component On: {gameObject.name} ");
@@ -23,12 +31,20 @@ public class LookAt : MonoBehaviour
     {
         if (!target) return;
 
-        if (Vector3.Angle(target.position - transform.position, _defaultForward) < radius)
+        var direction = (target.position - transform.position).normalized;
+        Quaternion rotation = Quaternion.LookRotation(direction, Vector3.up);
+
+        float deltaX = Mathf.DeltaAngle(_defaultForward.x, rotation.eulerAngles.x);
+        float deltaY = Mathf.DeltaAngle(_defaultForward.y, rotation.eulerAngles.y);
+        if (deltaX < minX ||
+            deltaX > maxX ||
+            deltaY < minY ||
+            deltaY > maxY)
         {
-            var direction = (target.position - transform.position).normalized;
-            transform.forward = Vector3.Lerp(transform.forward, direction, smoothness);
+            transform.rotation = Quaternion.Lerp(transform.rotation, _defaultRotation, smoothness);
         }
         else
-            transform.forward = Vector3.Lerp(transform.forward, _defaultForward, smoothness);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, smoothness);
+
     }
 }
