@@ -19,4 +19,8 @@ public class GameManager : MonoBehaviour
     }
 
     public Transform GetPlayerTransform() => playerTransform;
+
+    public void SaveThis<T>(T thing, string saveName) => SavingLoadingData.Save(thing, saveName);
+
+    public T LoadThis<T>(string saveName) => SavingLoadingData.Load<T>(saveName);
 }
