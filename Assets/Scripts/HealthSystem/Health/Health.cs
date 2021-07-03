@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,11 +21,11 @@ public class Health : MonoBehaviour
     public void ReduceHealth(float amount)
     {
         OnTakeDamage?.Invoke();
-        Debug.Log($"{gameObject.name} : {_currentHealth}");
+       // Debug.Log($"{gameObject.name} : {_currentHealth}");
         _currentHealth -= amount;
         if (_currentHealth <= 0)
         {
-            Debug.Log($"{gameObject.name} Died");
+           // Debug.Log($"{gameObject.name} Died");
             OnDeath.Invoke();
         }
     }
