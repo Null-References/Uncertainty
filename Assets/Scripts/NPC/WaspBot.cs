@@ -24,4 +24,8 @@ public class WaspBot : MonoBehaviour
     {
         WaspBotPool.Instance.ReturnToPool(this);
     }
+    public void ReduceNumberOfAliveBots()
+    {
+
+    }
 }

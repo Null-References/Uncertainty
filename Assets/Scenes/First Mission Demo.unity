@@ -6669,6 +6669,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75bfce5d35b4bf945be7b904baa2f80e, type: 3}
+--- !u!1 &1137658092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e3ae3f0d1d189014ebf3caf67ddc2ea6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2117263625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1137658095
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137658092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 0
+  m_Mesh: {fileID: 4579454407841743219, guid: e3ae3f0d1d189014ebf3caf67ddc2ea6, type: 3}
 --- !u!1 &1202570031
 GameObject:
   m_ObjectHideFlags: 0
@@ -7945,7 +7965,7 @@ MonoBehaviour:
   difficulty: 1
   spawnPosition: {fileID: 77643053}
   maxAliveBots: 5
-  spawnRate: 10
+  spawnRate: 3
   pathPoints:
   - {fileID: 238167961}
   - {fileID: 987568885}

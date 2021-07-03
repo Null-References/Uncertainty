@@ -7,7 +7,7 @@ public abstract class PoolBase<T> : MonoBehaviour where T : Component
 
     public static PoolBase<T> Instance { get; private set; }
 
-    private Queue<T> _objects = new Queue<T>();
+    protected Queue<T> _objects = new Queue<T>();
 
     private void Awake()
     {
@@ -22,13 +22,13 @@ public abstract class PoolBase<T> : MonoBehaviour where T : Component
     }
 
 
-    public void ReturnToPool(T returnObject)
+    virtual public void ReturnToPool(T returnObject)
     {
         returnObject.gameObject.SetActive(false);
         _objects.Enqueue(returnObject);
     }
 
-    public T Get()
+    virtual public T Get()
     {
         if (_objects.Count < 1)
         {
@@ -38,7 +38,7 @@ public abstract class PoolBase<T> : MonoBehaviour where T : Component
         return _objects.Dequeue();
     }
 
-    private void AddToPool(int count)
+    virtual protected void AddToPool(int count)
     {
         for (int i = 0; i < count; i++)
         {
