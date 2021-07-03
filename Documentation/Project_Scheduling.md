@@ -16,7 +16,7 @@
 - [x] Usecase Diagram - *Deadline: 2021/June/11*
 - [x] Activity Diagram - *Deadline: 2021/June/13*
 - [x] Class Diagram - *Deadline: 2021/July/1*
-- [ ] Sequence Diagram - *Deadline: 2021/July/3*
+- [x] Sequence Diagram - *Deadline: 2021/July/3*
 
 
 ### Project management:  

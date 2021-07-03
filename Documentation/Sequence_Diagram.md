@@ -24,6 +24,7 @@
     <li><a href="#nonrepeatabletimer">NonRepeatableTimer</a></li>
     <li><a href="#poolbase">PoolBase</a></li>
     <li><a href="#shipcontroler">ShipControler</a></li>
+    <li><a href="#takenormaldamage">TakeNormalDamage</a></li>
   </ol>
 </details>
 
@@ -145,4 +146,9 @@
 * Update function
 
 ![Update](Sequence_Diagram_Pictures/ShipControler/ShipControler_Update.png)
+
+## TakeNormalDamage:  
+* TakeDamage function
+
+![TakeDamage](Sequence_Diagram_Pictures/TakeNormalDamage/TakeNormalDamage_TakeDamage.png)
 
