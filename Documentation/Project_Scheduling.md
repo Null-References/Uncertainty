@@ -31,11 +31,11 @@
 - [x] Enemies System - *Deadline: 2021/June/21*
 - [x] Level Design - *Deadline: 2021/July/2*
 - [x] Health/Damage-System - *Deadline: 2021/July/1*
-- [ ] Boss-Fight Combat - *Deadline: 2021/July/3*
-- [ ] UI Mockup - *Deadline: 2021/July/3*
-- [ ] Cleaning-Refactoring - *Deadline: 2021/July/3*
-- [ ] Mission Portal - *Deadline: 2021/July/3*
+- [x] Boss-Fight Combat - *Deadline: 2021/July/3*
+- [x] Cleaning-Refactoring - *Deadline: 2021/July/3*
 - [x] Post-Proccesing - *Deadline: 2021/July/3*
+- [x] Save & Load data - *Deadline: 2021/July/3*
+- [ ] UI Mockup - *Deadline: 2021/July/3*
 - [ ] Testing - *Deadline: 2021/July/3*
 
 
