@@ -8,10 +8,13 @@ public class EnemyChase : EnemyMoveState
     private float _targetMaxDistance;
     private float _rotationSmoothness;
     private Transform _player;
-    private void Start()
+
+    private void OnEnable()
     {
         GetDependencies();
-
+    }
+    private void Start()
+    {
         _player = GameManager.Instance.GetPlayerTransform();
     }
     protected override void Update()

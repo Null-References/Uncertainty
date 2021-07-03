@@ -10,30 +10,43 @@ public class EnemyIdle : EnemyMoveState
 
     private RepeatableTimer _timer;
     private Transform _currentPoint;
-    
-    private void Start()
+
+    private void OnEnable()
     {
         GetDependencies();
-
-        _currentPoint = _pathPoints[0];
+    }
+    private void Start()
+    {
         _timer = new RepeatableTimer(_timeToNextPoint);
     }
     protected override void Update()
     {
         _timer.Tick(Time.deltaTime);
+
+        if (_currentPoint == null || _pathPoints == null || _pathPoints.Count == 0)
+        {
+            GetDependencies();
+            return;
+        }
+
         Idle();
     }
     private void Idle()
     {
         if (_timer.IsReady())
         {
-            var pointCount = _pathPoints.Count;
-            var rand = Random.Range(0, pointCount - 1);
-            var selectedPoint = _pathPoints[rand];
-            _currentPoint = selectedPoint;
+            GetRandomPoint();
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, _rotationSmoothness);// TODO : maybe here need * time.deltatime cant think right now
+        transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, _rotationSmoothness * Time.deltaTime);
+    }
+
+    private void GetRandomPoint()
+    {
+        var pointCount = _pathPoints.Count;
+        var rand = Random.Range(0, pointCount - 1);
+        var selectedPoint = _pathPoints[rand];
+        _currentPoint = selectedPoint;
     }
 
     protected override void GetDependencies()
@@ -47,5 +60,7 @@ public class EnemyIdle : EnemyMoveState
         _timeToNextPoint = data.timeToNextPoint;
         _rotationSmoothness = data.rotationSmoothness;
         _pathPoints = data.pathPoints;
+        if (_pathPoints.Count != 0)
+            GetRandomPoint();
     }
 }

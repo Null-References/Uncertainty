@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -8,8 +6,13 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private UnityEvent OnDeath;
+    [SerializeField] private UnityEvent OnTakeDamage;
 
     private float _currentHealth;
+    private void OnEnable()
+    {
+        _currentHealth = maxHealth;
+    }
 
     private void Start()
     {
@@ -17,11 +20,12 @@ public class Health : MonoBehaviour
     }
     public void ReduceHealth(float amount)
     {
+        OnTakeDamage?.Invoke();
+       // Debug.Log($"{gameObject.name} : {_currentHealth}");
         _currentHealth -= amount;
-
-        if (_currentHealth<=0)
+        if (_currentHealth <= 0)
         {
-            Debug.Log($"{gameObject.name} Died");
+           // Debug.Log($"{gameObject.name} Died");
             OnDeath.Invoke();
         }
     }
