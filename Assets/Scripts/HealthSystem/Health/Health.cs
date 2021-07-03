@@ -9,15 +9,11 @@ public class Health : MonoBehaviour
     [SerializeField] private UnityEvent OnTakeDamage;
 
     private float _currentHealth;
-    private void OnEnable()
-    {
-        _currentHealth = maxHealth;
-    }
+    private void OnEnable() => ResetHealth();
 
-    private void Start()
-    {
-        _currentHealth = maxHealth;
-    }
+    public void ResetHealth() => _currentHealth = maxHealth;
+
+    private void Start() => ResetHealth();
     public void ReduceHealth(float amount)
     {
         OnTakeDamage?.Invoke();
@@ -29,4 +25,5 @@ public class Health : MonoBehaviour
             OnDeath.Invoke();
         }
     }
+    public float GetHealthPercent() => _currentHealth / maxHealth;
 }
