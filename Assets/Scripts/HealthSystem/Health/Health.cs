@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     public void ReduceHealth(float amount)
     {
         OnTakeDamage?.Invoke();
-
+        Debug.Log($"{gameObject.name} : {_currentHealth}");
         _currentHealth -= amount;
         if (_currentHealth <= 0)
         {

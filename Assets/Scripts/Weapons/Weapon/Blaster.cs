@@ -26,6 +26,7 @@ class Blaster : WeaponBase
         projectile.SetOwner(_ownerID);
         projectile.transform.position = shotPoint.position;
         projectile.transform.rotation = shotPoint.rotation;
+        projectile.SetDamage(damage);
         projectile.gameObject.SetActive(true);
     }
 }

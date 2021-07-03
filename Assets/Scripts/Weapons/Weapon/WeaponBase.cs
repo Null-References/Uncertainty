@@ -2,8 +2,8 @@
 
 public abstract class WeaponBase : MonoBehaviour
 {
-    [SerializeField] private float damage;
     [SerializeField] private float fireRate;
+    [SerializeField] protected float damage;
     [SerializeField] protected Transform shotPoint;
 
     protected RepeatableTimer _timer;

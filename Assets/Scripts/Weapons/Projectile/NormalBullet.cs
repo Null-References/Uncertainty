@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-[RequireComponent(typeof(DamageDealer))]
+[RequireComponent(typeof(NormalDamage))]
 public class NormalBullet : MonoBehaviour, IProjectile
 {
     [SerializeField] private float speed = 1f;
@@ -10,17 +11,22 @@ public class NormalBullet : MonoBehaviour, IProjectile
     private int _owner;
     private NonRepeatableTimer _timer;
     private DamageDealer _dealer;
+    private NormalDamage _normalDamage;
 
     private void OnEnable() => _timer.ResetTimer();
 
     private void Awake()
     {
+        _normalDamage = GetComponent<NormalDamage>();
         _timer = new NonRepeatableTimer(lifeTime);
         _timer.OnTimerEnded += DeSpawn;
     }
 
-    private void Start() => _dealer = GetComponent<DamageDealer>();
+    private void Start()
+    {
+        _dealer = GetComponent<DamageDealer>();
 
+    }
     public void OnTriggerEnter(Collider other)
     {
         //Debug.Log($"{other.name} : {other.GetInstanceID()}");
@@ -42,6 +48,8 @@ public class NormalBullet : MonoBehaviour, IProjectile
         DeSpawn();
     }
 
+
+
     private void Update()
     {
         _timer.Tick(Time.deltaTime);
@@ -50,6 +58,10 @@ public class NormalBullet : MonoBehaviour, IProjectile
     public void SetOwner(int ownerID)
     {
         _owner = ownerID;
+    }
+    public void SetDamage(float damage)
+    {
+        _normalDamage.DamageAmount = damage;
     }
     private void DeSpawn() => NormalBulletPool.Instance.ReturnToPool(this);
 }
