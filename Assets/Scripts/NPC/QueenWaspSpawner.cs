@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class QueenWaspSpawner : MonoBehaviour
 {
     [SerializeField] private int difficulty = 1;
     [SerializeField] private Transform spawnPosition;
-    [SerializeField] private int maxAliveBots = 5;
+    [SerializeField] private int maxAliveBots = 3;
     [SerializeField] private float spawnRate = 10f;
     [SerializeField] private List<Transform> pathPoints;
 
@@ -34,7 +35,9 @@ public class QueenWaspSpawner : MonoBehaviour
             var newBot = WaspBotPool.Instance.Get();
             newBot.gameObject.SetActive(true);
             newBot.transform.position = spawnPosition.position;
-            newBot.SetPathPoints(pathPoints);
+            int portion = (pathPoints.Count / maxAliveBots);
+            var botPointPortion = pathPoints.GetRange(_currentBotCount%pathPoints.Count * portion, portion); // TODO : fix out of range and null refrence problem
+            newBot.SetPathPoints(botPointPortion);
         }
     }
 
