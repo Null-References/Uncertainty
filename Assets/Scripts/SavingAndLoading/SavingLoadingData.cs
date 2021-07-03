@@ -6,6 +6,7 @@ public class SavingLoadingData : MonoBehaviour
 {
     public static void Save<T>(T saveThisThing, string saveName)
     {
+        //Debug.Log(Application.persistentDataPath);
         string path = Application.persistentDataPath + "/Uncertainty/saves/";
         if (!Directory.Exists(path))
             Directory.CreateDirectory(path);
