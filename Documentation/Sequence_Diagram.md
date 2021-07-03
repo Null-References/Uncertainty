@@ -20,6 +20,10 @@
     <li><a href="#enemyweaponcontroller">EnemyWeaponController</a></li>
     <li><a href="#gamemanager">GameManager</a></li>
     <li><a href="#health">Health</a></li>
+    <li><a href="#lookat">LookAt</a></li>
+    <li><a href="#nonrepeatabletimer">NonRepeatableTimer</a></li>
+    <li><a href="#poolbase">PoolBase</a></li>
+    <li><a href="#shipcontroler">ShipControler</a></li>
   </ol>
 </details>
 
@@ -108,4 +112,37 @@
 
 ![ReduceHealth](Sequence_Diagram_Pictures/Health/Health_ReduceHealth.png)
 
+
+## LookAt:  
+* Update function
+
+![Update](Sequence_Diagram_Pictures/LookAt/LookAt_Update.png)
+
+## NonRepeatableTimer:  
+* Tick function
+
+![Tick](Sequence_Diagram_Pictures/NonRepeatableTimer/NonRepeatableTimer_Tick.png)
+
+
+## PoolBase:  
+* Awake function
+
+![Awake](Sequence_Diagram_Pictures/PoolBase/PoolBase_Awake.png)
+
+* Get function
+
+![Get](Sequence_Diagram_Pictures/PoolBase/PoolBase_Get.png)
+
+* ReturnToPool function
+
+![ReturnToPool](Sequence_Diagram_Pictures/PoolBase/PoolBase_ReturnToPool.png)
+
+## ShipControler:  
+* FixedUpdate function
+
+![FixedUpdate](Sequence_Diagram_Pictures/ShipControler/ShipControler_FixedUpdate.png)
+
+* Update function
+
+![Update](Sequence_Diagram_Pictures/ShipControler/ShipControler_Update.png)
 
