@@ -10,9 +10,7 @@ public class WaspBot : MonoBehaviour
     private void OnEnable()
     {
         if (_container == null)
-        {
             _container = GetComponent<EnemyMoveDataContainer>();
-        }
     }
     public void SetPathPoints(List<Transform> points)
     {
@@ -21,5 +19,9 @@ public class WaspBot : MonoBehaviour
     public void SetSpeed(float speed)
     {
         _container.speed = speed;
+    }
+    public void ReturnToPool()
+    {
+        WaspBotPool.Instance.ReturnToPool(this);
     }
 }

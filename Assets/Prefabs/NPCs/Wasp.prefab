@@ -141,6 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6907912602846946773}
+  - component: {fileID: 2519423524552048265}
   - component: {fileID: 7066102468020951029}
   - component: {fileID: 6907912602846946794}
   - component: {fileID: 6907912602846946795}
@@ -148,7 +149,6 @@ GameObject:
   - component: {fileID: 6907912602846946774}
   - component: {fileID: 6907912602846946772}
   - component: {fileID: 6907912602846946769}
-  - component: {fileID: 2519423524552048265}
   - component: {fileID: 7424639094531288651}
   - component: {fileID: 7605839969998497942}
   m_Layer: 9
@@ -174,6 +174,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2519423524552048265
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6907912602846946792}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.54
+  m_Height: 17.34
+  m_Direction: 1
+  m_Center: {x: 0, y: -1.58, z: 0.28}
 --- !u!114 &7066102468020951029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,20 +283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 2
   center: {fileID: 6907912602846946773}
---- !u!136 &2519423524552048265
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6907912602846946792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 3.4
-  m_Height: 17.34
-  m_Direction: 1
-  m_Center: {x: 0, y: -1.58, z: 0.28}
 --- !u!114 &7424639094531288651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,8 +295,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f3812f62b1bd3b4e93294422b92ebd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 50
   OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7066102468020951029}
+        m_MethodName: ReturnToPool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnTakeDamage:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &7605839969998497942
@@ -970,6 +984,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720214559300918345, guid: ad928fb35a1bc0d4ea1129d9f2783728,
+        type: 3}
+      propertyPath: damage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5720214559300918345, guid: ad928fb35a1bc0d4ea1129d9f2783728,
         type: 3}
