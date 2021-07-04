@@ -9,7 +9,7 @@
     <br />
 
 - [x] Project Deadlines - *Deadline: 2021/June/6*
-- [ ] Project Delivery - *Deadline: 2021/July/3*
+- [x] Project Delivery - *Deadline: 2021/July/3*
 
 ### Documentation:  
 - [x] Need Assessment - *Deadline: 2021/June/7*
