@@ -1,6 +1,9 @@
-﻿public interface IState
+﻿namespace NPC.Enemy_AI.StateMachine
 {
-    void Enter();
-    IState ProcessTransition();
-    void Exit();
+    public interface IState
+    {
+        void Enter();
+        IState ProcessTransition();
+        void Exit();
+    }
 }

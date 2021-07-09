@@ -1,4 +1,7 @@
-﻿public interface IDamage
+﻿namespace HealthSystem.Damage.DamageDealer
 {
-    float Damage();
+    public interface IDamage
+    {
+        float Damage();
+    }
 }

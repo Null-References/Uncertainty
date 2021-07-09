@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageDealer : MonoBehaviour
+namespace HealthSystem.Damage.DamageDealer
 {
-    public Dictionary<Type, IDamage> DamageTypes { get; private set; }
-
-    private void Start() //gathering all damage components
+    public class DamageDealer : MonoBehaviour
     {
-        DamageTypes = new Dictionary<Type, IDamage>();
+        public Dictionary<Type, IDamage> DamageTypes { get; private set; }
 
-        var damages = GetComponents<IDamage>();
-        foreach (var damage in damages)
+        private void Start() //gathering all damage components
         {
-            DamageTypes.Add(damage.GetType(), damage);
+            DamageTypes = new Dictionary<Type, IDamage>();
+
+            var damages = GetComponents<IDamage>();
+            foreach (var damage in damages)
+            {
+                DamageTypes.Add(damage.GetType(), damage);
+            }
         }
     }
 }

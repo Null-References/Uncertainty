@@ -2,18 +2,21 @@
 using NUnit.Framework;
 using UnityEngine.TestTools;
 
-public class TimerTests
+namespace EditModeTests
 {
-    // A Test behaves as an ordinary method
-    [Test]
-    public void TimerTestSimplePasses()
+    public class TimerTests
     {
-        // Use the Assert class to test conditions
-    }
+        // A Test behaves as an ordinary method
+        [Test]
+        public void TimerTestSimplePasses()
+        {
+            // Use the Assert class to test conditions
+        }
 
-    [UnityTest]
-    public IEnumerator Timer_After_5_Seconds()
-    {
-        yield return null;
+        [UnityTest]
+        public IEnumerator Timer_After_5_Seconds()
+        {
+            yield return null;
+        }
     }
 }

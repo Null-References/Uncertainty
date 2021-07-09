@@ -1,32 +1,39 @@
 ﻿using UnityEngine;
+using Weapons.Projectile;
 
-class Blaster : WeaponBase
+namespace Weapons.Weapon
 {
-    private int _ownerID;
-    private void Start()
+    class Blaster : WeaponBase
     {
-        var collider = GetComponentInParent<Collider>();
-        if (collider != null)
-        {
-            _ownerID =collider.GetInstanceID();
-        }
-    }
-    public override void Shoot()
-    {
-        _timer.Tick(Time.deltaTime);
-        if (_timer.IsReady())
-        {
-            var projectile = NormalBulletPool.Instance.Get();
-            SetProjectileSettings(projectile);
-        }
-    }
+        private int _ownerID;
 
-    private void SetProjectileSettings(NormalBullet projectile)
-    {
-        projectile.SetOwner(_ownerID);
-        projectile.transform.position = shotPoint.position;
-        projectile.transform.rotation = shotPoint.rotation;
-        projectile.SetDamage(damage);
-        projectile.gameObject.SetActive(true);
+        private void Start()
+        {
+            var theCollider = GetComponentInParent<Collider>();
+            if (theCollider != null)
+            {
+                _ownerID = theCollider.GetInstanceID();
+            }
+        }
+
+        public override void Shoot()
+        {
+            _timer.Tick(Time.deltaTime);
+            if (_timer.IsReady())
+            {
+                var projectile = NormalBulletPool.Instance.Get();
+                SetProjectileSettings(projectile);
+            }
+        }
+
+        private void SetProjectileSettings(NormalBullet projectile)
+        {
+            projectile.SetOwner(_ownerID);
+            var tempTransform = projectile.transform;
+            tempTransform.position = shotPoint.position;
+            tempTransform.rotation = shotPoint.rotation;
+            projectile.SetDamage(damage);
+            projectile.gameObject.SetActive(true);
+        }
     }
 }

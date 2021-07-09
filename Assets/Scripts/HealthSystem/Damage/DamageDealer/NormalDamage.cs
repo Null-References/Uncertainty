@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(DamageDealer))]
-public class NormalDamage : MonoBehaviour, IDamage
+namespace HealthSystem.Damage.DamageDealer
 {
-    public float DamageAmount = 5f;
-    public float Damage() => DamageAmount;
+    [RequireComponent(typeof(DamageDealer))]
+    public class NormalDamage : MonoBehaviour, IDamage
+    {
+        public float damageAmount = 5f;
+        public float Damage() => damageAmount;
+    }
 }

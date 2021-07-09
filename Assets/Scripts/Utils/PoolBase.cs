@@ -1,50 +1,53 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PoolBase<T> : MonoBehaviour where T : Component
+namespace Utils
 {
-    [SerializeField] private T prefab;
-
-    public static PoolBase<T> Instance { get; private set; }
-
-    protected Queue<T> _objects = new Queue<T>();
-
-    private void Awake()
+    public abstract class PoolBase<T> : MonoBehaviour where T : Component
     {
-        if (Instance != null && Instance != this)
+        [SerializeField] private T prefab;
+
+        public static PoolBase<T> Instance { get; private set; }
+
+        protected Queue<T> _objects = new Queue<T>();
+
+        private void Awake()
         {
-            Destroy(this);
-            return;
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this);
+                return;
+            }
+
+            Instance = this;
+            //DontDestroyOnLoad(this.gameObject);
         }
 
-        Instance = this;
-        //DontDestroyOnLoad(this.gameObject);
-    }
 
-
-    virtual public void ReturnToPool(T returnObject)
-    {
-        returnObject.gameObject.SetActive(false);
-        _objects.Enqueue(returnObject);
-    }
-
-    virtual public T Get()
-    {
-        if (_objects.Count < 1)
+        public virtual void ReturnToPool(T returnObject)
         {
-            AddToPool(1);
+            returnObject.gameObject.SetActive(false);
+            _objects.Enqueue(returnObject);
         }
 
-        return _objects.Dequeue();
-    }
-
-    virtual protected void AddToPool(int count)
-    {
-        for (int i = 0; i < count; i++)
+        public virtual T Get()
         {
-            var newObject = Instantiate(prefab);
-            newObject.gameObject.SetActive(false);
-            _objects.Enqueue(newObject);
+            if (_objects.Count < 1)
+            {
+                AddToPool(1);
+            }
+
+            return _objects.Dequeue();
+        }
+
+        protected virtual void AddToPool(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                var newObject = Instantiate(prefab);
+                newObject.gameObject.SetActive(false);
+                _objects.Enqueue(newObject);
+            }
         }
     }
 }

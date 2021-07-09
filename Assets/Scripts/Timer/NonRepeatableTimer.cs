@@ -1,19 +1,22 @@
 ﻿using System;
 
-public class NonRepeatableTimer : CustomTimer
+namespace Timer
 {
-    public event Action OnTimerEnded;
-
-    public NonRepeatableTimer(float duration) : base(duration)
+    public class NonRepeatableTimer : CustomTimer
     {
-    }
+        public event Action OnTimerEnded;
 
-    public override void Tick(float deltaTime)
-    {
-        _remainingTime -= deltaTime;
-        if (_remainingTime <= 0)
+        public NonRepeatableTimer(float duration) : base(duration)
         {
-            OnTimerEnded?.Invoke();
+        }
+
+        public override void Tick(float deltaTime)
+        {
+            _remainingTime -= deltaTime;
+            if (_remainingTime <= 0)
+            {
+                OnTimerEnded?.Invoke();
+            }
         }
     }
 }

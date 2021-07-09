@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
-[Serializable]
-public class StateTransition
+namespace NPC.Enemy_AI.StateMachine
 {
-    [Header("Next State")] [SerializeField]
-    private State nextState;
+    [Serializable]
+    public class StateTransition
+    {
+        [Header("Next State")] [SerializeField]
+        private State nextState;
 
-    [Header("Conditions")] [SerializeField]
-    private List<Condition> conditions;
+        [Header("Conditions")] [SerializeField]
+        private List<Conditions.Condition> conditions;
 
 
-    public StateTransition(State nextState) => this.nextState = nextState;
+        public StateTransition(State nextState) => this.nextState = nextState;
 
-    public State GetNextStateIfConditionMet() => conditions.AreMet() ? nextState : null;
+        public State GetNextStateIfConditionMet() => conditions.AreMet() ? nextState : null;
+    }
 }
