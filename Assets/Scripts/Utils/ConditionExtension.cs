@@ -1,7 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using NPC.Enemy_AI.StateMachine.Conditions;
 
-public static class ConditionExtension
+namespace Utils
 {
-    public static bool AreMet(this List<Condition> conditions) => conditions.All(item => item.IsMet);
+    public static class ConditionExtension
+    {
+        public static bool AreMet(this List<Condition> conditions) => conditions.All(item => item.IsMet);
+    }
 }

@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
 
-public class EnemyAnimationController : MonoBehaviour
+namespace NPC.Enemy_AI
 {
-    [SerializeField] private Animator animator;
+    public class EnemyAnimationController : MonoBehaviour
+    {
+        [SerializeField] private Animator animator;
+        private static readonly int Shoot = Animator.StringToHash("Shoot");
 
-    public void SetShooting()
-    {
-        animator.SetBool("Shoot", true);
-    }
-    public void SetIdle()
-    {
-        animator.SetBool("Shoot", false);
+        public void SetShooting() => animator.SetBool(Shoot, true);
+
+        public void SetIdle() => animator.SetBool(Shoot, false);
     }
 }

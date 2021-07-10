@@ -1,3 +1,6 @@
-﻿public interface IProjectile
+﻿namespace Weapons.Projectile
 {
+    public interface IProjectile
+    {
+    }
 }

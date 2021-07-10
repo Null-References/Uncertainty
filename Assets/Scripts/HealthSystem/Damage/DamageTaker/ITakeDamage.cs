@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using HealthSystem.Damage.DamageDealer;
 
-public interface ITakeDamage
+namespace HealthSystem.Damage.DamageTaker
 {
-    void TakeDamage(Dictionary<Type,IDamage> damageTypes);
+    public interface ITakeDamage
+    {
+        void TakeDamage(Dictionary<Type, IDamage> damageTypes);
+    }
 }

@@ -1,19 +1,19 @@
-﻿public abstract class CustomTimer
+﻿namespace Timer
 {
-    protected float Duration { get; }
-
-    protected float _remainingTime;
-
-    protected CustomTimer(float duration)
+    public abstract class CustomTimer
     {
-        Duration = duration;
-        _remainingTime = duration;
-    }
+        protected float Duration { get; }
 
-    public void ResetTimer()
-    {
-        _remainingTime = Duration;
-    }
+        protected float _remainingTime;
 
-    public abstract void Tick(float deltaTime);
+        protected CustomTimer(float duration)
+        {
+            Duration = duration;
+            _remainingTime = duration;
+        }
+
+        public void ResetTimer() => _remainingTime = Duration;
+
+        public abstract void Tick(float deltaTime);
+    }
 }

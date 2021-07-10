@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Weapons.Weapon;
 
 [RequireComponent(typeof(ShipInputValueHandler))]
 public class ShipShootingController : MonoBehaviour

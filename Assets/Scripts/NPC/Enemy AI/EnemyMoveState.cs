@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-public abstract class EnemyMoveState : MonoBehaviour
+namespace NPC.Enemy_AI
 {
-    protected abstract void Update();
-    protected abstract void GetDependencies();
+    public abstract class EnemyMoveState : MonoBehaviour
+    {
+        protected abstract void Update();
+        protected abstract void GetDependencies();
+    }
 }

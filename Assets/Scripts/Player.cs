@@ -3,8 +3,5 @@
 public class Player : MonoBehaviour
 {
     public float xp;
-    public void PlayerDeath()
-    {
-        gameObject.SetActive(false);
-    }
+    public void PlayerDeath() => gameObject.SetActive(false);
 }

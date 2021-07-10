@@ -1,14 +1,18 @@
-﻿using UnityEngine;
+﻿using Timer;
+using UnityEngine;
 
-public abstract class WeaponBase : MonoBehaviour
+namespace Weapons.Weapon
 {
-    [SerializeField] private float fireRate;
-    [SerializeField] protected float damage;
-    [SerializeField] protected Transform shotPoint;
+    public abstract class WeaponBase : MonoBehaviour
+    {
+        [SerializeField] private float fireRate;
+        [SerializeField] protected float damage;
+        [SerializeField] protected Transform shotPoint;
 
-    protected RepeatableTimer _timer;
+        protected RepeatableTimer _timer;
 
-    private void Awake() => _timer = new RepeatableTimer(fireRate);
+        private void Awake() => _timer = new RepeatableTimer(fireRate);
 
-    public abstract void Shoot();
+        public abstract void Shoot();
+    }
 }

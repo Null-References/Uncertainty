@@ -1,37 +1,41 @@
 ﻿using UnityEngine;
+using Utils;
 
-public class WaspBotPool : PoolBase<WaspBot>
+namespace NPC
 {
-    private int _count = 0;
-    private int _alive = 0;
-    private int _deathCount = 0;
-
-    public int GetNumberOfAlive() => _alive;
-
-    public override void ReturnToPool(WaspBot returnObject)
+    public class WaspBotPool : PoolBase<WaspBot>
     {
-        base.ReturnToPool(returnObject);
-        _alive -= 1;
-        _deathCount++;
-        GameManager.Instance.SaveThis(_deathCount, "PlayerKillCount");
-        int killScore = GameManager.Instance.LoadThis<int>("PlayerKillCount");
-        Debug.Log(killScore);
-    }
+        private int _count = 0;
+        private int _alive = 0;
+        private int _deathCount = 0;
 
-    public override WaspBot Get()
-    {
-        if (_objects.Count < 1)
+        public int GetNumberOfAlive() => _alive;
+
+        public override void ReturnToPool(WaspBot returnObject)
         {
-            AddToPool(1);
+            base.ReturnToPool(returnObject);
+            _alive -= 1;
+            _deathCount++;
+            GameManager.Instance.SaveThis(_deathCount, "PlayerKillCount");
+            int killScore = GameManager.Instance.LoadThis<int>("PlayerKillCount");
+            Debug.Log(killScore);
         }
 
-        return _objects.Dequeue();
-    }
+        public override WaspBot Get()
+        {
+            if (_objects.Count < 1)
+            {
+                AddToPool(1);
+            }
 
-    protected override void AddToPool(int count)
-    {
-        base.AddToPool(count);
-        _count += count;
-        _alive += count;
+            return _objects.Dequeue();
+        }
+
+        protected override void AddToPool(int count)
+        {
+            base.AddToPool(count);
+            _count += count;
+            _alive += count;
+        }
     }
 }

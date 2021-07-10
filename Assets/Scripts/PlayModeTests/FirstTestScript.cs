@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using NUnit.Framework;
+using Timer;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Tests
+namespace PlayModeTests
 {
     public class FirstTestScript
     {

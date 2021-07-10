@@ -1,66 +1,69 @@
 ﻿using System.Collections.Generic;
+using Timer;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyMoveDataContainer))]
-public class EnemyIdle : EnemyMoveState
+namespace NPC.Enemy_AI
 {
-    private float _timeToNextPoint;
-    private float _rotationSmoothness;
-    private List<Transform> _pathPoints;
-
-    private RepeatableTimer _timer;
-    private Transform _currentPoint;
-
-    private void OnEnable()
+    [RequireComponent(typeof(EnemyMoveDataContainer))]
+    public class EnemyIdle : EnemyMoveState
     {
-        GetDependencies();
-    }
-    private void Start()
-    {
-        _timer = new RepeatableTimer(_timeToNextPoint);
-    }
-    protected override void Update()
-    {
-        _timer.Tick(Time.deltaTime);
+        private float _timeToNextPoint;
+        private float _rotationSmoothness;
+        private List<Transform> _pathPoints;
 
-        if (_currentPoint == null || _pathPoints == null || _pathPoints.Count == 0)
+        private RepeatableTimer _timer;
+        private Transform _currentPoint;
+
+        private void OnEnable() => GetDependencies();
+
+        private void Start() => _timer = new RepeatableTimer(_timeToNextPoint);
+
+        protected override void Update()
         {
-            GetDependencies();
-            return;
+            _timer.Tick(Time.deltaTime);
+
+            if (_currentPoint == null || _pathPoints == null || _pathPoints.Count == 0)
+            {
+                GetDependencies();
+                return;
+            }
+
+            Idle();
         }
 
-        Idle();
-    }
-    private void Idle()
-    {
-        if (_timer.IsReady())
+        private void Idle()
         {
-            GetRandomPoint();
+            if (_timer.IsReady())
+            {
+                GetRandomPoint();
+            }
+
+            transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation,
+                _rotationSmoothness * Time.deltaTime);
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, _currentPoint.rotation, _rotationSmoothness * Time.deltaTime);
-    }
-
-    private void GetRandomPoint()
-    {
-        var pointCount = _pathPoints.Count;
-        var rand = Random.Range(0, pointCount - 1);
-        var selectedPoint = _pathPoints[rand];
-        _currentPoint = selectedPoint;
-    }
-
-    protected override void GetDependencies()
-    {
-        var data = GetComponent<EnemyMoveDataContainer>();
-        if (!data)
+        private void GetRandomPoint()
         {
-            Debug.Log($"Add enemy move data container to : {gameObject.name} ");
-            return;
+            var pointCount = _pathPoints.Count;
+            var rand = Random.Range(0, pointCount - 1);
+            var selectedPoint = _pathPoints[rand];
+            _currentPoint = selectedPoint;
         }
-        _timeToNextPoint = data.timeToNextPoint;
-        _rotationSmoothness = data.rotationSmoothness;
-        _pathPoints = data.pathPoints;
-        if (_pathPoints.Count != 0)
-            GetRandomPoint();
+
+        protected override void GetDependencies()
+        {
+            var data = GetComponent<EnemyMoveDataContainer>();
+            if (!data)
+            {
+                Debug.Log($"Add enemy move data container to : {gameObject.name} ");
+                return;
+            }
+
+            _timeToNextPoint = data.timeToNextPoint;
+            _rotationSmoothness = data.rotationSmoothness;
+            _pathPoints = data.pathPoints;
+            if (_pathPoints.Count != 0)
+                GetRandomPoint();
+        }
     }
 }
