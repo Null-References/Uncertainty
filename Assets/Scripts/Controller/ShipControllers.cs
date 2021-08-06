@@ -3,9 +3,8 @@
 namespace Controller
 {
     [RequireComponent(typeof(ShipInputValueHandler))]
-    public class ShipControllers : MonoBehaviour, IPhysicalMovable
+    public class ShipControllers : MonoBehaviour, IPhysicalMovable, IPhysicalRotatable
     {
-
         [SerializeField] private Transform shipModel;
 
         [Header("Physic")] [SerializeField] private float moveSpeed = 1f;
@@ -20,10 +19,13 @@ namespace Controller
         [SerializeField] private float fancinessSpeed = 1f;
 
         public Rigidbody Rigidbody => _rb;
+        public Vector2 TorqueForceValue => (_mouseValue * _currentTorqueSpeed);
+        public float RollForceValue => (_inputHandler.GetRollValue * rollSpeed);
         public Vector3 Direction => transform.forward;
         public float Speed => (_inputHandler.GetMoveValue * moveSpeed);
 
         private PhysicalMovement _physicalMovement;
+        private PhysicalRotation _physicalRotation;
         private Rigidbody _rb = null;
         private ShipInputValueHandler _inputHandler;
         private Vector2 _mouseValue = Vector2.zero;
@@ -34,12 +36,13 @@ namespace Controller
             _rb = GetComponent<Rigidbody>();
             _inputHandler = GetComponent<ShipInputValueHandler>();
             _physicalMovement = new PhysicalMovement(this);
+            _physicalRotation = new PhysicalRotation(this);
         }
 
         private void FixedUpdate()
         {
             _physicalMovement.Move();
-            Rotate();
+            _physicalRotation.Rotate();
         }
 
         private void Update()
@@ -51,14 +54,6 @@ namespace Controller
         }
 
         private void Aim() => _currentTorqueSpeed = _inputHandler.GetAimingInput() ? aimingTorqueSpeed : torqueSpeed;
-        
-        private void Rotate()
-        {
-            //Physic part
-            var torque = _mouseValue * _currentTorqueSpeed;
-            var roll = _inputHandler.GetRollValue * rollSpeed;
-            _rb.AddRelativeTorque(-torque.y, torque.x, -roll, ForceMode.VelocityChange);
-        }
 
         private void VisualRotate()
         {
@@ -70,6 +65,5 @@ namespace Controller
                 Time.deltaTime * fancinessSpeed
             );
         }
-        
     }
 }
