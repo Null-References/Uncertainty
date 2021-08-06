@@ -3,8 +3,9 @@
 namespace Controller
 {
     [RequireComponent(typeof(ShipInputValueHandler))]
-    public class ShipControllers : MonoBehaviour
+    public class ShipControllers : MonoBehaviour, IPhysicalMovable
     {
+
         [SerializeField] private Transform shipModel;
 
         [Header("Physic")] [SerializeField] private float moveSpeed = 1f;
@@ -18,7 +19,11 @@ namespace Controller
         [Range(0, 50)] [SerializeField] private float pitchFanciness = 1f;
         [SerializeField] private float fancinessSpeed = 1f;
 
+        public Rigidbody Rigidbody => _rb;
+        public Vector3 Direction => transform.forward;
+        public float Speed => (_inputHandler.GetMoveValue * moveSpeed);
 
+        private PhysicalMovement _physicalMovement;
         private Rigidbody _rb = null;
         private ShipInputValueHandler _inputHandler;
         private Vector2 _mouseValue = Vector2.zero;
@@ -28,11 +33,12 @@ namespace Controller
         {
             _rb = GetComponent<Rigidbody>();
             _inputHandler = GetComponent<ShipInputValueHandler>();
+            _physicalMovement = new PhysicalMovement(this);
         }
 
         private void FixedUpdate()
         {
-            Move();
+            _physicalMovement.Move();
             Rotate();
         }
 
@@ -45,9 +51,7 @@ namespace Controller
         }
 
         private void Aim() => _currentTorqueSpeed = _inputHandler.GetAimingInput() ? aimingTorqueSpeed : torqueSpeed;
-
-        private void Move() => _rb.AddForce(transform.forward * (_inputHandler.GetMoveValue * moveSpeed));
-
+        
         private void Rotate()
         {
             //Physic part
@@ -66,5 +70,6 @@ namespace Controller
                 Time.deltaTime * fancinessSpeed
             );
         }
+        
     }
 }
