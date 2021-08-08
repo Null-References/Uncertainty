@@ -6,6 +6,6 @@ namespace HealthSystem.Damage.DamageTaker
 {
     public interface ITakeDamage
     {
-        void TakeDamage(Dictionary<Type, IDamage> damageTypes);
+        void TakeDamage(IDamageStats damageStats);
     }
 }

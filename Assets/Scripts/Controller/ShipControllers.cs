@@ -5,6 +5,7 @@ namespace Controller
     [RequireComponent(typeof(ShipInputValueHandler))]
     public class ShipControllers : MonoBehaviour, IPhysicalMovable, IPhysicalRotatable
     {
+
         [SerializeField] private Transform shipModel;
 
         [Header("Physic")] [SerializeField] private float moveSpeed = 1f;
