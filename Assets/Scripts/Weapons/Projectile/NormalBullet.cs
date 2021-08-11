@@ -37,14 +37,12 @@ namespace Weapons.Projectile
             if ((whatIsCollidable.value & (1 << other.gameObject.layer)) <= 0)
                 return;
 
-            var target = other.GetComponents<ITakeDamage>();
-            if (target.Length <= 0)
+            var target = other.GetComponent<ITakeDamage>();
+            if (target == null)
                 return;
 
-            foreach (var taker in target)
-            {
-                taker.TakeDamage(_dealer.DamageTypes);
-            }
+            target.TakeDamage(_dealer.DamageTypes);
+            
 
             DeSpawn();
         }
