@@ -78,7 +78,10 @@ we plan to develop a space shooter action-packed adventure game based on boss fi
 - Database: Data are handled in Unity (using Serialization.Formatters.Binary)
 
 ## Screenshots:  
+![Sky 1](Documentation/GamePlay_Screenshots/Sky_1.jpg)
 ![Ship & Boss 1](Documentation/GamePlay_Screenshots/ship_and_boss_1.jpg)
+![Ship & Boss 2](Documentation/GamePlay_Screenshots/ship_and_boss_3.jpg)
+
 
 ## Project Requirements:  
 ### Functional Requirements:  
