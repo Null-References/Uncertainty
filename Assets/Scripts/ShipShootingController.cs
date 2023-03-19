@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 using Weapons.Weapon;
 
 [RequireComponent(typeof(ShipInputValueHandler))]
@@ -47,7 +48,7 @@ public class ShipShootingController : MonoBehaviour
     private void CalculateScreenSpaceAimPoint()
     {
         //mouse pos in screen space
-        Vector3 mousePos = Input.mousePosition;
+        Vector3 mousePos = Mouse.current.position.value;
         //difference vector from center to mousePos, pointing at mousePos
         Vector2 difference = mousePos - new Vector3(Screen.width / 2, Screen.height / 2, 0);
 

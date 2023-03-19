@@ -11,7 +11,8 @@
                     "id": "5ac58c89-e668-48f7-9a08-4554be5d4ea8",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Free_Look",
@@ -19,7 +20,8 @@
                     "id": "46e05938-b8c1-48fe-9e48-d11c0512c316",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Move_Forward_Backward",
@@ -27,7 +29,8 @@
                     "id": "42599a94-9e0f-4379-8866-92d487f10cd9",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Roll",
@@ -35,7 +38,8 @@
                     "id": "e93cb68a-16b7-4b9a-a3b2-a3aa18d54dc1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Shoot",
@@ -43,7 +47,8 @@
                     "id": "1cd9bc77-e24a-4d6e-8521-5008c1cd3514",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Aiming",
@@ -51,7 +56,8 @@
                     "id": "8116b163-f9e9-49a0-9423-f67b8e4d24cb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Hold"
+                    "interactions": "Hold",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
